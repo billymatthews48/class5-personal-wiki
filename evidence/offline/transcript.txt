@@ -1,0 +1,95 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20260929234306
+Username: BILLY\billy
+RunAs User: BILLY\billy
+Configuration Name: 
+Machine: BILLY (Microsoft Windows NT 10.0.26200.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File scripts\offline_demo.ps1
+Process ID: 18512
+PSVersion: 5.1.26100.9444
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.9444
+BuildVersion: 10.0.26100.9444
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is evidence\offline\transcript.txt
+
+===== 1. Device and time =====
+
+Tuesday, September 29, 2026 11:43:06 PM
+OS: Microsoft Windows 11 Pro 10.0.26200
+CPU: AMD Ryzen 5 7533HS with Radeon Graphics
+RAM total GB: 13.3 | free GB: 1.8
+GPU: AMD Radeon(TM) 660M
+
+===== 2. Proof the internet is disconnected =====
+
+
+
+Name                         Status
+----                         ------
+Ethernet                     Disconnected
+Bluetooth Network Connection Disconnected
+Wi-Fi                        Disconnected
+
+
+
+PS>TerminatingError(Resolve-DnsName): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: github.com : No DNS servers configured for local system"
+
+===== 3. Restart the local runtime (Ollama) =====
+PS>TerminatingError(Invoke-RestMethod): "The operation has timed out."
+
+
+
+===== 4. Restart the CLI: help and doctor =====
+
+
+
+===== 5. Ingest a NEW local source while offline =====
+  done in 98.28s (838 prompt tok, 401 out)
+ingest finished in 108.4s: 1 notes written, 0 unchanged, 5113 passages indexed
+ComputerName TcpTestSucceeded
+------------ ----------------
+8.8.8.8                 False
+DNS: github.com could not be resolved (offline)
+Energy Transition.md
+Macroeconomics.md
+Microeconomics.md
+Strategic Management.md
+Technology Adoption Curves.md
+Brand Management.md
+Marketing Strategy.md
+Leading People.md
+Negotiation.md
+Organizational Behaviour.md
+Power and Influence.md
+
+===== 6. Search (original passages, no model) =====
+
+
+===== 7. Ask (one example from the CLI) =====
+
+
+===== 8. All four ask tests + chat/search mode checks =====
+
+
+===== 9. Memory in use after the run =====
+
+
+
+
+Name      Id RSS_MB
+----      -- ------
+ollama 11812     21
+
+
+free RAM GB: 1.9
+
+**********************
+Windows PowerShell transcript end
+End time: 20260929235007
+**********************

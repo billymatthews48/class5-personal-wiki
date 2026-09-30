@@ -4,6 +4,7 @@ Notes on my Cambridge Management Studies degree, Berkeley MBA coursework, and Gi
 
 ## Economics and Strategy
 
+- [[Energy Transition]]: Billy produced an Energy Transition Memo that analyzes the shift in the energy landscape, focusing on the increasing role of electricity.
 - [[Macroeconomics]]: This collection of notes covers various aspects of Macroeconomics, ranging from the immediate global economic impacts of events like COVID-19 to long-term growth models and short-run economic fluctuations.
 - [[Microeconomics]]: Microeconomics is a core module covering the principles of markets, firm behavior, and industry structure, as evidenced by coursework and supervision materials.
 - [[Strategic Management]]: This collection of notes covers the core concepts of Strategic Management, ranging from classical strategy definitions to modern concepts like blue ocean strategy and platform dynamics.

@@ -4,6 +4,7 @@ Every original file in `raw/`, unchanged. `sha256` is the fingerprint of the fil
 
 | Original | Origin | Passages | Note | sha256 |
 |---|---|---|---|---|
+| [[raw/added/Energy Transition Memo.docx\|Energy Transition Memo.docx]] | added later | 9 | [[Energy Transition]] | `496c0f54b988` |
 | [[raw/cambridge/Electives/Macroeconomics/Assessment/1114L_MSE9_ESSAY. docx (1).pdf\|1114L_MSE9_ESSAY. docx (1).pdf]] | OneDrive/Cambridge academics/Year 3/Electives/Macroeconomics/Assessment/1114L_MSE9_ESSAY. docx (1).pdf | 39 | [[Macroeconomics]] | `d57903be9447` |
 | [[raw/cambridge/Electives/Macroeconomics/Assessment/Additional readings.docx\|Additional readings.docx]] | OneDrive/Cambridge academics/Year 3/Electives/Macroeconomics/Assessment/Additional readings.docx | 31 | [[Macroeconomics]] | `fe1e45a46545` |
 | [[raw/cambridge/Electives/Macroeconomics/Assessment/Core readings.docx\|Core readings.docx]] | OneDrive/Cambridge academics/Year 3/Electives/Macroeconomics/Assessment/Core readings.docx | 8 | [[Macroeconomics]] | `66eab4def5d8` |
