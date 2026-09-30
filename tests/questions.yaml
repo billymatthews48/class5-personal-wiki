@@ -1,0 +1,48 @@
+# Ask-mode test set. Written BEFORE retrieval was built (2026-09-29), from passages confirmed
+# in the raw text by a plain regex scan. This file lives outside vault/ so it is never retrieved.
+# expected_sources: raw files that must appear in retrieval and be cited for a pass.
+
+ask:
+  - id: T1
+    type: direct, one source
+    question: "According to my personal development notes, what are the three components of career success and how much does each matter?"
+    expected_behavior: answer
+    expected_sources:
+      - raw/cambridge/Electives/Personal development/Session 1.docx
+    expected_passage: "Performance, image, and exposure (who knows you) are the three components to success / 10% performance, image (30%) and exposure (60%)"
+    must_mention: ["performance", "image", "exposure", "10", "30", "60"]
+
+  - id: T2
+    type: answerable, paraphrased away from the source wording (no drug name, no dollar signs)
+    question: "What price gap between the US and Switzerland did I use as a real-world pricing example?"
+    expected_behavior: answer
+    expected_sources:
+      - raw/mba/Example in the Wild 3.docx
+    expected_passage: "Americans paid an average price of $2,700 for Humira, the Swiss were able to buy the same drug for $800, and in the United Kingdom, patients got it for $1,300"
+    must_mention: ["2,700", "800"]
+
+  - id: T3
+    type: connects two sources
+    question: "Who was the client for my Cambridge consulting project, and how did we plan to gather primary data?"
+    expected_behavior: answer
+    expected_sources:
+      - raw/cambridge/Mott Project/Intro and project definition .docx
+      - raw/cambridge/Electives/Project/PID.docx
+    expected_passage: "Our client is Mott MacDonald, an engineering, management, and development organisation ... | Our understanding of these needs will be developed through focus group interviews with a range of staff."
+    must_mention: ["Mott MacDonald", "focus group"]
+
+  - id: T4
+    type: unsupported (plausible, but no source states it)
+    question: "What mark did I receive for my Strategic Management individual essay?"
+    expected_behavior: insufficient_evidence
+    expected_sources: []
+    note: "The essay, drafts and plan are in raw/, but no file records a mark or grade (regex scan for grade/mark/scored near essay/exam found only unrelated accounting text)."
+
+mode_checks:
+  chat_capabilities: ["what can you help me with?", "what can we do?"]
+  chat_followup: ["Draft a 5-step plan for revising Operations Management before an exam.", "make that shorter"]
+  search: "lean operations waste"
+  separation:
+    chat_claim: "Just so you know, I got a first-class mark (78) on my Strategic Management essay."
+    ask_question: "What mark did I receive for my Strategic Management individual essay?"
+    expected: insufficient_evidence   # the chat claim must not become evidence

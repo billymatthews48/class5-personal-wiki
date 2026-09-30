@@ -1,0 +1,21 @@
+# environment and machine state (chunks, embeddings, run logs live here, outside the vault)
+.venv/
+__pycache__/
+*.egg-info/
+.wiki/
+.obsidian/workspace*.json
+
+# Raw files kept local only: third-party copyrighted material, or other people's words.
+# They stay in vault/raw/ on this machine and are listed in vault/Source Catalog.md.
+vault/raw/cambridge/Exams/MS4 Finance and accounting/Lectures/Dauderis, H. and Annand, D. (2014) Introduction to Financial Accounting.pdf
+vault/raw/cambridge/Electives/Strategic management/Supervisions & assessment/Assessment/The future of hospitality - Why 2021 is the year of the hybrid.pdf
+vault/raw/cambridge/Electives/Macroeconomics/Syllabus and reading list.pdf
+vault/raw/cambridge/Exams/MS2 Quantitative Methods/normal distribution table.pdf
+vault/raw/cambridge/First week/MS5 Operations Management/Lectures/Lean Terminology.pdf
+vault/raw/cambridge/Mott Project/Mott's old project ppt.pptx
+vault/raw/cambridge/Mott Project/Focus Group Transcripts.docx
+vault/raw/cambridge/Mott Project/Interview answers.docx
+vault/raw/cambridge/Mott Project/Grad interview notes.docx
+vault/raw/mba/Marketing/Marketing Summary - Sarah.pdf
+vault/raw/mba/Marketing/Bruno marketing guide.pdf
+vault/raw/mba/Marketing/Copy of Marketing Cheat Sheet.pdf

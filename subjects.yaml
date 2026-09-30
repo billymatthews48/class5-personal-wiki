@@ -1,0 +1,133 @@
+# Which raw files feed which wiki note. One coherent subject per note; a subject can draw on
+# several courses (e.g. Microeconomics = Cambridge MS3 + MBA economics work).
+#
+#   key:     stable machine id for the subject (kept in note properties, never in filenames)
+#   title:   the note's filename and H1, 2-6 words. Gemma writes the note body; the title is
+#            fixed here so re-ingestion can never rename a note back to something machine-like.
+#   folder:  topic folder under vault/wiki/
+#   sources: glob patterns relative to vault/ (first match wins, top to bottom)
+#
+# Raw files matching no pattern are reported by `wiki ingest` and indexed for search anyway.
+
+subjects:
+  - key: microeconomics
+    title: Microeconomics
+    folder: Economics and Strategy
+    sources:
+      - raw/cambridge/Week 2/MS3 Micro economics/**
+      - raw/cambridge/Week 2/oEcon questions/**
+      - raw/mba/Group 112 Economics Memo.docx
+      - raw/mba/Example in the Wild 3.docx
+
+  - key: macroeconomics
+    title: Macroeconomics
+    folder: Economics and Strategy
+    sources: [raw/cambridge/Electives/Macroeconomics/**]
+
+  - key: strategic-management
+    title: Strategic Management
+    folder: Economics and Strategy
+    sources: [raw/cambridge/Electives/Strategic management/**]
+
+  - key: technology-adoption
+    title: Technology Adoption Curves
+    folder: Economics and Strategy
+    sources: [raw/mba/Tech BM .docx]
+
+  - key: marketing
+    title: Marketing Strategy
+    folder: Marketing
+    sources:
+      - raw/cambridge/First week/MS6 Marketing/**
+      - raw/mba/Marketing/Assignment.docx
+      - raw/mba/Marketing/Bruno marketing guide.pdf
+      - raw/mba/Marketing/Copy of Marketing Cheat Sheet.pdf
+      - raw/mba/Marketing/Marketing Summary - Sarah.pdf
+
+  - key: brand-management
+    title: Brand Management
+    folder: Marketing
+    sources:
+      - raw/mba/Marketing/SBM HW 2.pdf
+      - raw/mba/Marketing/OGSM Billy Matthews.*
+      - raw/mba/Marketing/Hwk 3.*
+      - raw/mba/Marketing/Personal Project.*
+
+  - key: organizational-behaviour
+    title: Organizational Behaviour
+    folder: People and Leadership
+    sources:
+      - raw/cambridge/Paper 1/MS1 Organizational Behaviour/**
+      - raw/cambridge/Week 2/MS1 Organizational Behaviour/**   # later edits of two lectures
+      - raw/cambridge/Week 2/OB Question/**
+
+  - key: leading-people
+    title: Leading People
+    folder: People and Leadership
+    sources: [raw/mba/Leading people teach the AI *.docx]
+
+  - key: power-and-politics
+    title: Power and Influence
+    folder: People and Leadership
+    sources: [raw/mba/Power and Pol essay.*, raw/mba/Power pol assignment 2.docx]
+
+  - key: negotiation
+    title: Negotiation
+    folder: People and Leadership
+    sources: [raw/cambridge/Electives/Negotiations/**]
+
+  - key: business-communication
+    title: Business Communication
+    folder: People and Leadership
+    sources: [raw/mba/BizComm/**]
+
+  - key: personal-development
+    title: Career Networking and Visibility
+    folder: People and Leadership
+    sources: [raw/cambridge/Electives/Personal development/**]
+
+  - key: operations-management
+    title: Operations Management
+    folder: Operations and Finance
+    sources: [raw/cambridge/First week/MS5 Operations Management/**]
+
+  - key: quantitative-methods
+    title: Quantitative Methods
+    folder: Operations and Finance
+    sources: [raw/cambridge/Exams/MS2 Quantitative Methods/**, raw/cambridge/Exams/1114l.docx]
+
+  - key: finance-and-accounting
+    title: Finance and Accounting
+    folder: Operations and Finance
+    sources:
+      - raw/cambridge/Exams/MS4 Finance and accounting/**
+      - raw/cambridge/Exams/1114l_M3_Assessment.*
+      - raw/mba/Finance/**
+
+  - key: mott-macdonald-project
+    title: Mott MacDonald Consulting Project
+    folder: Projects
+    sources: [raw/cambridge/Mott Project/**, raw/cambridge/Electives/Project/**]
+
+  - key: custom-llm
+    title: Custom LLM Training
+    folder: Projects
+    sources: [raw/github/class4-custom-llm/**]
+
+  - key: networking-tracker
+    title: Secure Networking Tracker
+    folder: Projects
+    sources: [raw/github/Assignment-1/**]
+
+  - key: management-studies-revision
+    title: Management Studies Revision
+    folder: Study Guides
+    sources:
+      - raw/cambridge/Michaelmas revision table.docx
+      - raw/cambridge/Week 2/Summary of all questions/**
+
+  - key: energy-transition
+    title: Energy Transition
+    folder: Economics and Strategy
+    sources: [raw/added/**]
+
