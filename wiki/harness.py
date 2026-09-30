@@ -267,6 +267,10 @@ class ChatSession:
         return self._record(user_text, text.strip(), query, used, stats_all)
 
     def _record(self, user_text, reply, query, used, stats_all):
+        if not used:
+            # No notes were retrieved this turn, so any [n] marker cites nothing (e.g. the model
+            # "citing" a remembered fact). Remove it rather than show a citation with no source.
+            reply = re.sub(r"\s*\[\d+(?:\s*,\s*\d+)*\]", "", reply)
         numbers = cited_numbers(reply) if used else set()
         valid = {n for n in numbers if 1 <= n <= len(used)}
         sources = source_lines(used, valid) if valid else []

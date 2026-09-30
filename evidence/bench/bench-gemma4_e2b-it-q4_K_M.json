@@ -1,9 +1,9 @@
 {
   "env": {
-    "time": "2026-09-30T00:55:40",
+    "time": "2026-09-30T01:01:41",
     "internet": "reachable",
     "execution": "local",
-    "model": "gemma4:e4b-it-q4_K_M",
+    "model": "gemma4:e2b-it-q4_K_M",
     "embed_model": "embeddinggemma",
     "runtime": "ollama version is 0.35.0",
     "num_ctx": 8192,
@@ -11,19 +11,19 @@
     "os": "Windows-11-10.0.26200-SP0",
     "cpu": "AMD64 Family 25 Model 68 Stepping 1, AuthenticAMD",
     "ram_total_gb": 13.3,
-    "ram_available_gb": 6.6
+    "ram_available_gb": 2.4
   },
   "rows": [
     {
       "step": "RAG answer, cold (model load included)",
-      "wall_s": 63.85,
-      "peak_ollama_rss_gb": 7.62,
+      "wall_s": 38.89,
+      "peak_ollama_rss_gb": 5.32,
       "peak_python_rss_gb": 0.1,
-      "min_system_available_gb": 0.2,
+      "min_system_available_gb": 2.89,
       "ollama_ps": [
         {
-          "name": "gemma4:e4b-it-q4_K_M",
-          "size_gb": 1.76,
+          "name": "gemma4:e2b-it-q4_K_M",
+          "size_gb": 0.94,
           "size_vram_gb": 0.0
         },
         {
@@ -32,24 +32,24 @@
           "size_vram_gb": 0.0
         }
       ],
-      "load_s": 18.22,
-      "ttft_s": 56.82,
+      "load_s": 13.22,
+      "ttft_s": 33.88,
       "prompt_tokens": 1085,
-      "prompt_tok_s": 29.8,
-      "gen_tokens": 46,
-      "gen_tok_s": 11.1,
+      "prompt_tok_s": 58.4,
+      "gen_tokens": 44,
+      "gen_tok_s": 19.9,
       "status": "answered"
     },
     {
       "step": "RAG answer, warm",
-      "wall_s": 9.75,
-      "peak_ollama_rss_gb": 5.35,
+      "wall_s": 7.94,
+      "peak_ollama_rss_gb": 5.33,
       "peak_python_rss_gb": 0.1,
-      "min_system_available_gb": 1.89,
+      "min_system_available_gb": 2.92,
       "ollama_ps": [
         {
-          "name": "gemma4:e4b-it-q4_K_M",
-          "size_gb": 1.76,
+          "name": "gemma4:e2b-it-q4_K_M",
+          "size_gb": 0.94,
           "size_vram_gb": 0.0
         },
         {
@@ -59,23 +59,23 @@
         }
       ],
       "load_s": 0.04,
-      "ttft_s": 2.56,
+      "ttft_s": 2.3,
       "prompt_tokens": 1085,
-      "prompt_tok_s": 2334.8,
-      "gen_tokens": 47,
-      "gen_tok_s": 9.6,
+      "prompt_tok_s": 5102.3,
+      "gen_tokens": 44,
+      "gen_tok_s": 13.1,
       "status": "answered"
     },
     {
       "step": "keyword search (no model)",
       "wall_s": 0.01,
-      "peak_ollama_rss_gb": 5.35,
+      "peak_ollama_rss_gb": 5.33,
       "peak_python_rss_gb": 0.1,
-      "min_system_available_gb": 1.87,
+      "min_system_available_gb": 2.93,
       "ollama_ps": [
         {
-          "name": "gemma4:e4b-it-q4_K_M",
-          "size_gb": 1.76,
+          "name": "gemma4:e2b-it-q4_K_M",
+          "size_gb": 0.94,
           "size_vram_gb": 0.0
         },
         {
@@ -87,10 +87,10 @@
     },
     {
       "step": "hybrid search (embeddinggemma)",
-      "wall_s": 2.11,
-      "peak_ollama_rss_gb": 5.35,
+      "wall_s": 2.1,
+      "peak_ollama_rss_gb": 5.33,
       "peak_python_rss_gb": 0.1,
-      "min_system_available_gb": 1.84,
+      "min_system_available_gb": 2.87,
       "ollama_ps": [
         {
           "name": "embeddinggemma:latest",
@@ -98,22 +98,22 @@
           "size_vram_gb": 0.0
         },
         {
-          "name": "gemma4:e4b-it-q4_K_M",
-          "size_gb": 1.76,
+          "name": "gemma4:e2b-it-q4_K_M",
+          "size_gb": 0.94,
           "size_vram_gb": 0.0
         }
       ]
     },
     {
       "step": "ingest: Gemma writes one note (Career Networking)",
-      "wall_s": 78.19,
-      "peak_ollama_rss_gb": 5.43,
+      "wall_s": 43.0,
+      "peak_ollama_rss_gb": 5.36,
       "peak_python_rss_gb": 0.11,
-      "min_system_available_gb": 1.52,
+      "min_system_available_gb": 2.68,
       "ollama_ps": [
         {
-          "name": "gemma4:e4b-it-q4_K_M",
-          "size_gb": 1.76,
+          "name": "gemma4:e2b-it-q4_K_M",
+          "size_gb": 0.94,
           "size_vram_gb": 0.0
         },
         {
@@ -122,22 +122,22 @@
           "size_vram_gb": 0.0
         }
       ],
-      "ttft_s": 37.65,
+      "ttft_s": 20.19,
       "prompt_tokens": 1025,
-      "prompt_tok_s": 29.2,
-      "gen_tokens": 438,
-      "gen_tok_s": 10.8
+      "prompt_tok_s": 57.2,
+      "gen_tokens": 373,
+      "gen_tok_s": 16.4
     },
     {
       "step": "ingest: parse + index all raw files (cached parse)",
-      "wall_s": 0.87,
-      "peak_ollama_rss_gb": 5.42,
-      "peak_python_rss_gb": 0.09,
-      "min_system_available_gb": 1.95,
+      "wall_s": 0.92,
+      "peak_ollama_rss_gb": 5.35,
+      "peak_python_rss_gb": 0.11,
+      "min_system_available_gb": 2.89,
       "ollama_ps": [
         {
-          "name": "gemma4:e4b-it-q4_K_M",
-          "size_gb": 1.76,
+          "name": "gemma4:e2b-it-q4_K_M",
+          "size_gb": 0.94,
           "size_vram_gb": 0.0
         },
         {

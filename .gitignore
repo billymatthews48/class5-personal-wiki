@@ -3,7 +3,7 @@
 __pycache__/
 *.egg-info/
 .wiki/
-.obsidian/workspace*.json
+vault/.obsidian/workspace*.json
 
 # Raw files kept local only: third-party copyrighted material, or other people's words.
 # They stay in vault/raw/ on this machine and are listed in vault/Source Catalog.md.

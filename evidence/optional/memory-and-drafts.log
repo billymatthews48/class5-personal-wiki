@@ -1,0 +1,47 @@
+﻿### 1. chat: /remember, then /reset, then a question that needs the memory, a draft, /draft, an unknown command
+Quill (chat) | model gemma4:e4b-it-q4_K_M | execution: local. /help for commands, /exit to quit.
+
+you> /remember My preferred revision method is active recall with flashcards.
+  saved to memory\Chat Memory.md
+you> /reset
+  (conversation cleared)
+you> What revision method do I prefer?
+quill> You mentioned that your preferred revision method is active recall with flashcards [1].
+
+you> Draft a two-line reminder to myself about revising Negotiation.
+quill> Here's a draft:
+
+Review core principles of Negotiation. Focus on BATNA and ZOPA definitions.
+
+Let me know if you want to tweak that or move on to something else.
+
+you> /draft
+  draft saved: drafts\Draft A Two Line Reminder.md
+you> /savememory please
+  unknown command '/savememory'; type /help
+you> /exit
+transcript saved: C:\Users\billy\Agentic AI\class5-personal-wiki\.wiki\runs\chat\20260930-010926-706.md
+### 2. files written (inside the vault, outside raw/)
+memory\Chat Memory.md
+drafts\Draft A Two Line Reminder.md
+--- vault\memory\Chat Memory.md
+# Chat Memory
+
+Saved only by an explicit /remember in chat. User-stated, not verified; excluded from search and ask.
+
+- 2026-09-30: My preferred revision method is active recall with flashcards.
+### 3. ask must NOT treat the remembered fact as evidence
+ask | model gemma4:e4b-it-q4_K_M | execution: local | standalone (no chat history)
+
+  Insufficient evidence: nothing in the wiki is close enough to this question (best similarity 0.32
+  < 0.45).
+
+closest passages (not used as evidence):
+  - raw/cambridge/Paper 1/MS1 Organizational Behaviour/Lectures/OB revision.docx (opening) cosine 0.317
+  - raw/cambridge/Exams/MS4 Finance and accounting/Accounting roadmap.docx (section 'Adjusting entries'; section 'Supervision 1') cosine 0.269
+  - raw/cambridge/Exams/MS4 Finance and accounting/Lectures/Dauderis, H. and Annand, D. (2014) Introduction to Financial Accounting.pdf (page 429) cosine 0.266
+status: insufficient_evidence | saved: C:\Users\billy\Agentic AI\class5-personal-wiki\.wiki\runs\ask\20260930-010930-447.md
+### 4. search must not return the memory or the draft (the index covers raw/ only)
+[1] raw/cambridge/First week/MS5 Operations Management/Lectures/Week 5 - Six Sigma process improvement.docx  (section 'Breaking down the definition')
+[2] raw/cambridge/Exams/MS4 Finance and accounting/Lectures/Dauderis, H. and Annand, D. (2014) Introduction to Financial Accounting.pdf  (page 429)
+[3] raw/cambridge/Exams/MS4 Finance and accounting/Lectures/Dauderis, H. and Annand, D. (2014) Introduction to Financial Accounting.pdf  (page 676)

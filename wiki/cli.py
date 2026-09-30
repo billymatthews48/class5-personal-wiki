@@ -1,4 +1,4 @@
-"""`wiki` command line. Parses arguments, picks the mode, prints results. Logic lives in harness.py."""
+﻿"""`wiki` command line. Parses arguments, picks the mode, prints results. Logic lives in harness.py."""
 import argparse
 import sys
 import textwrap
@@ -82,8 +82,12 @@ def cmd_chat(args, h):
         except (EOFError, KeyboardInterrupt):
             print()
             break
+        # PowerShell prefixes piped input with a byte-order mark, which would hide a leading "/".
+        line = line.lstrip("ï»¿").removeprefix("Ã¯Â»Â¿").strip()
         if not line:
             continue
+        if not sys.stdin.isatty():
+            print(line)               # echo piped input so transcripts show what was asked
         if line in ("/exit", "/quit"):
             break
         if line == "/help":
@@ -115,6 +119,10 @@ def cmd_chat(args, h):
             if not force:
                 print("  usage: /notes QUERY")
                 continue
+        elif line.startswith("/"):
+            # Never pass an unrecognised command to the model: it would answer as if it had run it.
+            print(f"  unknown command {line.split()[0]!r}; type /help")
+            continue
         print("quill> ", end="", flush=True)
         try:
             e = s.turn(line, force_query=force, on_token=lambda t: print(t, end="", flush=True))
@@ -168,7 +176,8 @@ def cmd_doctor(args, h):
     n = len(index_store.load_chunks())
     vec = index_store.load_vectors(n)
     print(f"index:  {n} passages, embeddings {'ok' if vec is not None else 'missing/stale (keyword only)'}")
-    print("online: not configured (local-only build)")
+    import os
+    print("online: optional, " + ("GEMINI_API_KEY is set" if os.environ.get("GEMINI_API_KEY") else "GEMINI_API_KEY not set (local mode needs nothing)"))
     return 0 if ok and n else 1
 
 

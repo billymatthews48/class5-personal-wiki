@@ -6,7 +6,9 @@ model that runs on my laptop and works with the internet disconnected.
 - **Watch:** [recorded offline run (11 min video)](evidence/offline-recorded/offline-demo.mp4)
 - **Results:** [offline test summary](evidence/offline-recorded/summary.md). All 4 ask tests and 5 mode checks pass.
 - **Wiki:** open [`vault/`](vault) in Obsidian, starting at [`vault/index.md`](vault/index.md). It has 21 subject notes in 6 topic folders.
-- **Not done:** see [What is incomplete](#what-is-incomplete). This includes the Obsidian screenshots and the E2B comparison.
+- **Obsidian:** [screenshots](#obsidian-screenshots) of an open note, the index and the graph.
+- **Model choice:** [E2B vs E4B comparison](evidence/model-comparison.md). Both pass every test; E2B is faster, E4B cites more carefully.
+- **Not done:** see [What is incomplete](#what-is-incomplete). Online mode has never produced an answer.
 
 ## 1. Purpose and sources
 
@@ -68,7 +70,12 @@ wiki ask "Who was the client for my Cambridge consulting project?" --mode local
 wiki chat                         # /notes QUERY, /remember TEXT, /draft, /save, /reset, /exit
 wiki lint
 wiki rename "Old Name" "New Name"
+wiki serve                        # optional local web page at http://127.0.0.1:8765
 ```
+
+Optional, and off unless asked for: `wiki ask "…" --mode online` sends the question and retrieved passages to hosted Gemma on
+the Gemini API. It needs `GEMINI_API_KEY` and is never used as a fallback. It is untested; see
+[What is incomplete](#what-is-incomplete).
 
 ### Why this model
 
@@ -76,30 +83,39 @@ wiki rename "Old Name" "New Name"
   loaded, so it cannot fit in 13.3 GB.
 - E2B (4.6 GB) and E4B (6.6 GB) both fit.
 - I chose E4B because I expected it to follow citation and refusal rules more reliably. It passed all four tests in both offline runs.
-- **I downloaded E2B but did not get to test it, so I have not shown that E4B is the smallest model that works.**
+- I then ran the same tests and benchmark on E2B ([model-comparison.md](evidence/model-comparison.md)):
+  - E2B also passes all nine checks.
+  - It answers in about 20 s where E4B takes about 35 s, and writes a note in 43 s where E4B takes 78 s.
+  - It leaves about 1 GB more RAM free. E4B's cold load drove free memory down to 0.2 GB.
+  - It made one unsupported citation in four answers (T3). E4B made none.
+- **So E2B is the smallest model that works here.** The repo default stays E4B because every offline run, the recording and
+  the 21 notes were produced with it and its citations were exact. Switching is one setting: `WIKI_MODEL=gemma4:e2b-it-q4_K_M`.
+- The comparison is one run per model on four questions. E2B was not run offline or used to write notes.
 
 ### Measured memory and response time (E4B, this laptop, my wiki)
 
 | Measurement | Value | Where |
 |---|---|---|
-| Model load, cold | 22.7–28.2 s | [bench](evidence/bench/bench-gemma4_e4b-it-q4_K_M.md), first smoke test |
-| RAG answer, cold (load included) | 70.4 s; first token at 62.9 s | bench |
+| Model load, cold | 18.2–28.2 s | [bench](evidence/bench/bench-gemma4_e4b-it-q4_K_M.md), first smoke test |
+| RAG answer, cold (load included) | 63.9 s; first token at 56.8 s | bench |
 | RAG answer, uncached prompt (T2, T3, T4; both offline runs) | 35.3–37.9 s; first token at 32–36 s; ~950–1,040 prompt tokens at ~31 tok/s; 9.6–13.8 tok/s generation | [offline](evidence/offline/ask), [offline-recorded](evidence/offline-recorded/ask) |
 | RAG answer, repeated question (prompt cached) | 7.8–9.8 s | T1 cards, bench |
 | Chat turn without retrieval | 11.4–30.1 s | mode_checks.json |
-| Keyword search / hybrid search | 0.02 s / 2.2 s | bench |
+| Keyword search / hybrid search | 0.01 s / 2.1 s | bench |
 | Ingest one new source offline (copy, parse, embed, Gemma writes the note, rebuild index) | 108.4 s (run 1); the note alone 92.5–98.3 s | transcript, video |
 | Re-ingest with nothing changed | 1.5 s, 0 notes written | [03-reingest-and-rename.log](evidence/ingest/03-reingest-and-rename.log) |
 | First full ingest: embedding 5,087 passages | 2,184 s (2.3 passages/s) | one-off; cached afterwards |
 | First full ingest: Gemma writing a note | 60–100 s each (872 s for the last 9) | [ingest logs](evidence/ingest) |
 
-**Memory** (end of the recorded offline run, [transcript](evidence/offline-recorded/transcript.txt) section 9):
-- The process that holds the chat model (`llama-server.exe`) had **3,861 MB resident and 8,590 MB committed**.
-- The embedding runner had 220 MB resident and 901 MB committed.
-- System free RAM was 1.2 GB before the run and 2.0 GB after. It touched 0.01 GB during a cold model load in the benchmark.
-- `ollama ps` reports 1.9 GB for the chat model, which understates what the process holds.
-- The "Peak Ollama RSS" column in the benchmark file (0.02 GB) is invalid. The sampler matched `ollama.exe` and not
-  `llama-server.exe`. The sampler is fixed in [tests/bench.py](tests/bench.py), but the benchmark was not rerun.
+**Memory** (E4B; [bench](evidence/bench/bench-gemma4_e4b-it-q4_K_M.md), sampled every 0.25 s across all Ollama processes):
+- Peak resident memory was **7.62 GB during a cold load**, settling to about 5.4 GB once warm.
+- Free system RAM fell to **0.2 GB** during the cold load and stayed at 1.5–1.9 GB afterwards.
+- At the end of the recorded offline run, the process holding the chat model (`llama-server.exe`) had 3,861 MB resident and
+  8,590 MB committed ([transcript](evidence/offline-recorded/transcript.txt) section 9).
+- `ollama ps` reports 1.76–1.9 GB for the chat model, which understates what the process holds.
+- An earlier version of the benchmark reported 0.02 GB because its sampler watched `ollama.exe` and not `llama-server.exe`.
+  That was fixed and the benchmark rerun; the figures above are from the rerun.
+- E2B for comparison: 5.32 GB peak, never below 2.68 GB free ([model-comparison.md](evidence/model-comparison.md)).
 
 ## 3. Architecture
 
@@ -211,6 +227,38 @@ Other evidence:
   missed T2 completely; hybrid found it.
 - **Test questions:** [tests/questions.yaml](tests/questions.yaml). They were written before retrieval was built and are kept
   outside the vault.
+- **Model comparison:** [model-comparison.md](evidence/model-comparison.md), with the E2B run in [evidence/e2b](evidence/e2b/summary.md).
+- **Optional extras:**
+  - [memory and drafts](evidence/optional/memory-and-drafts.md) (`/remember`, `/draft`): tested; two bugs found and fixed.
+  - [local web page and online mode](evidence/optional/web-ui-and-online-mode.md): the web page is tested; online mode is
+    tested only for its no-key error.
+
+### Obsidian screenshots
+
+`vault/` opened as the vault in Obsidian 1.13.7. Captured by [scripts/obsidian_screenshots.ps1](scripts/obsidian_screenshots.ps1).
+
+**1. An open note.** Short filename, matching heading, machine IDs in properties, `reviewed` ticked.
+
+![Negotiation note](evidence/screenshots/1-note-negotiation.png)
+
+The same note scrolled to its source references. Each link opens the original file in `raw/`.
+
+![Negotiation note, Sources section](evidence/screenshots/1b-note-related-and-sources.png)
+
+**2. The index**, grouped by topic with a one-line description per note.
+
+![index.md](evidence/screenshots/2-index.png)
+
+**3. The graph view.** Filter used: `path:wiki/`, Attachments off, existing files only.
+
+![Graph view with the filter panel](evidence/screenshots/3-graph-path-wiki.png)
+
+The same graph with the filter panel collapsed, so all 21 note labels are visible.
+
+![Graph view, all notes](evidence/screenshots/3b-graph-all-notes.png)
+
+Not shown in a screenshot: the note's Related section (it sits between Key ideas and Sources), and a click-through from a note
+to a source file. Both can be checked by opening the vault.
 
 ## 6. Reflection: failures and limitations
 
@@ -227,23 +275,29 @@ Other evidence:
 4. **Handwritten scans are unreadable.** Tesseract scored 40–46 confidence on nine handwritten supervisions, so they are
    excluded from the index. A handwriting model such as TrOCR is the next step.
 5. **Speed.** About 35 s per uncached answer on CPU. Ollama's log says the AMD driver is too old for GPU inference and that it
-   dropped the integrated GPU (`OLLAMA_IGPU_ENABLE=1` would enable it). I did not test that, or E2B.
+   dropped the integrated GPU (`OLLAMA_IGPU_ENABLE=1` would enable it). I did not test that. E2B is about 1.7x faster
+   ([model-comparison.md](evidence/model-comparison.md)).
 6. **Notes are written from samples.** Gemma sees only the opening excerpts of up to 12 files per subject, so large subjects
    (Finance has 14 files, Operations 26) are summarised from a sample. The review caught one unsupported detail, one wrong attribution and two
    imprecise claims, which suggests a smaller model needs this check every time.
-7. **A runtime auto-update broke a run.** Ollama updated itself mid-ingest and killed the server. The harness reported
+7. **Gemma claimed to have saved something it had not.** While testing `/remember`, a command the CLI failed to recognise
+   reached Gemma, which replied "Okay, I've logged that". Nothing had been saved. Unknown `/commands` are now rejected by the
+   harness and never reach the model ([details](evidence/optional/memory-and-drafts.md)). The same test showed Gemma adding
+   "[1]" to a remembered fact with no source behind it; the harness now strips citation markers when nothing was retrieved.
+8. **Citation checks are shallow.** The harness confirms a cited number exists, not that the passage supports the claim.
+   E2B's T3 answer cited a passage that does not name the client and still passed. Improvement: check that the key terms of
+   each cited sentence appear in the cited passage.
+9. **A runtime auto-update broke a run.** Ollama updated itself mid-ingest and killed the server. The harness reported
    "Ollama is not reachable" and the ingest resumed cleanly afterwards, but the results now span two runtime versions.
 
 ## What is incomplete
 
-- **Obsidian screenshots** (open note with sources, index, graph filtered to `path:wiki/`): not captured yet. The vault is
-  complete and lint-clean, so they can be taken at any time.
-- **E2B comparison:** E2B was downloaded but never run, so "smallest model that works" is not demonstrated.
-- **Optional features written but untested:**
-  - `--mode online` (hosted `gemma-4-26b-a4b-it` on the Gemini API; needs `GEMINI_API_KEY`)
-  - `wiki serve` (local web page)
-  - `/remember` and `/draft` in chat.
-
-  Local mode is the default and does not depend on any of them.
-- **Memory benchmark:** the fixed sampler was not rerun. The memory figures above come from the recorded run's process
-  snapshot, not from a sampled peak.
+- **Online mode has never produced an answer.** `--mode online` (hosted `gemma-4-26b-a4b-it` on the Gemini API) is written,
+  but no API key was available. Only its no-key error path is tested. Local mode is the default and does not depend on it.
+- **E2B is not the default, and was only tested online.** The comparison shows it is the smallest model that works, but it
+  was run once, with the internet connected, and never used to write notes.
+- **The web page's Ask and Chat tabs were not clicked through by hand.** Their endpoints were tested, and the Search tab was
+  tested in a browser.
+- **No click-through from a note to a source file is shown.** The screenshots show the links; following one was not recorded.
+- **Nine handwritten scans are not searchable** (see limitation 4).
+- **The recorded transcript lacks the CLI's own output.** The video shows it.
