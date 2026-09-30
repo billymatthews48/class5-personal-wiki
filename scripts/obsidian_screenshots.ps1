@@ -104,15 +104,10 @@ Open-Note "wiki\People and Leadership\Negotiation.md"
 Start-Sleep 4                                  # first launch: let the vault index
 Capture "1-note-negotiation.png"
 
-# Scroll the same note to its end so the Related links and Sources section are visible.
-$p = Get-Obsidian
-$r = New-Object Win+RECT
-[Win]::GetWindowRect($p.MainWindowHandle, [ref]$r) | Out-Null
-[Win]::SetCursorPos([int]($r.L + ($r.R - $r.L) * 0.62), [int]($r.T + ($r.B - $r.T) * 0.55)) | Out-Null
-[Win]::mouse_event(2, 0, 0, 0, [UIntPtr]::Zero); [Win]::mouse_event(4, 0, 0, 0, [UIntPtr]::Zero)   # click into the editor
-Start-Sleep -Milliseconds 500
-[System.Windows.Forms.SendKeys]::SendWait("^{END}")
-Start-Sleep 1
+# Open the same note at its "Related" heading, so the related links and the Sources section
+# below them are visible. A heading link needs the vault-name form of the URI; no clicks or keys.
+Start-Process ("obsidian://open?vault=vault&file=" + [uri]::EscapeDataString("wiki/People and Leadership/Negotiation#Related"))
+Start-Sleep 4
 Capture "1b-note-related-and-sources.png"
 
 Open-Note "index.md"

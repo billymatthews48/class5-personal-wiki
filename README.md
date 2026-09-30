@@ -241,9 +241,11 @@ Other evidence:
 
 ![Negotiation note](evidence/screenshots/1-note-negotiation.png)
 
-The same note scrolled to its source references. Each link opens the original file in `raw/`.
+The same note opened at its Related heading (Obsidian highlights the section the link targets). It shows key ideas each
+linked to the file they came from, the related notes with a reason for each link, and the source references. Each source
+link opens the original file in `raw/`.
 
-![Negotiation note, Sources section](evidence/screenshots/1b-note-related-and-sources.png)
+![Negotiation note: key ideas, related links and sources](evidence/screenshots/1b-note-related-and-sources.png)
 
 **2. The index**, grouped by topic with a one-line description per note.
 
@@ -257,8 +259,7 @@ The same graph with the filter panel collapsed, so all 21 note labels are visibl
 
 ![Graph view, all notes](evidence/screenshots/3b-graph-all-notes.png)
 
-Not shown in a screenshot: the note's Related section (it sits between Key ideas and Sources), and a click-through from a note
-to a source file. Both can be checked by opening the vault.
+Not shown in a screenshot: a click-through from a note to a source file. It can be checked by opening the vault.
 
 ## 6. Reflection: failures and limitations
 
