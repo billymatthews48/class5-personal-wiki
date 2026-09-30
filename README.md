@@ -83,7 +83,7 @@ wiki serve                        # optional local web page at http://127.0.0.1:
   of my notes). Retrieval and embeddings stay local.
 - **Never a fallback:** it runs only when `--mode online` is given. If the API fails, the command stops with the error.
 - **Evidence:** the four ask tests pass ([evidence/online](evidence/online/summary.md), details in
-  [web-ui-and-online-mode.md](evidence/optional/web-ui-and-online-mode.md)). Online chat was not tested.
+  [web-ui-and-online-mode.md](evidence/optional/web-ui-and-online-mode.md)). Online chat also works, with retrieval through `/notes`.
 
 ### Why this model
 
@@ -301,8 +301,9 @@ Not shown in a screenshot: a click-through from a note to a source file. It can 
 
 ## What is incomplete
 
-- **Online chat is untested.** Online mode was tested for ask only (4 / 4 pass). Hosted Gemma is not given the `search_notes`
-  tool, so online chat would retrieve only through `/notes`. The API also returned sporadic HTTP 500 errors, which the client retries.
+- **Online chat cannot search by itself.** Online ask (4 / 4 pass) and online chat both work, but hosted Gemma is not given the
+  `search_notes` tool, so online chat retrieves only when I type `/notes`. The API also returned sporadic HTTP 500 errors,
+  which the client retries.
 - **E2B is not the default, and was only tested online.** The comparison shows it is the smallest model that works, but it
   was run once, with the internet connected, and never used to write notes.
 - **The web page's Ask and Chat tabs were not clicked through by hand.** Their endpoints were tested, and the Search tab was

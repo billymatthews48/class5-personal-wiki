@@ -59,9 +59,29 @@ Wall time was 8–80 s per answer, including retries.
    - Fix: up to 5 attempts with increasing waits. If all fail, the command stops with the API error. It never falls back to
      the local model.
 
+### Online chat: tested, works
+
+Script: [scripts/test_online_chat.ps1](../../scripts/test_online_chat.ps1). Output: [online-chat.log](online-chat.log).
+
+| Turn | Result |
+|---|---|
+| "what can you help me with?" | capabilities reply, no notes search (13.1 s) |
+| "Draft a three-line study plan for Operations Management." | a three-line plan, labelled "Suggestion:", no notes search (19.1 s) |
+| "make that shorter" | the same three lines shortened, from conversation context (6.6 s) |
+| `/notes lean operations waste` | 4 passages retrieved locally; the reply cites [1], [3] and [4] (19.5 s) |
+
+I checked the `/notes` reply against the passages:
+- the "ideal process" definition is in [1]
+- the "95% of throughput time" figure is in [4]
+- Jidoka and the list of wastes are in [3].
+
+All three citations are supported.
+
+**Limit:** hosted Gemma is not given the `search_notes` tool, so online chat never decides to search by itself. It retrieves
+only when I type `/notes`. Local chat does get the tool.
+
 ### Not tested
 
-- `wiki chat --mode online`. Hosted Gemma is not given the `search_notes` tool, so online chat would only retrieve through `/notes`.
 - Online mode while offline. It would fail with "could not reach the Gemini API".
 
 ### With no key
