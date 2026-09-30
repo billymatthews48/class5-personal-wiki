@@ -43,7 +43,7 @@ This collection of notes covers the core concepts of Strategic Management, rangi
 - [[raw/cambridge/Electives/Strategic management/Supervisions & assessment/Assessment/Assessment further readings.docx|Strategic management / Assessment further readings]]
 - [[raw/cambridge/Electives/Strategic management/Supervisions & assessment/Assessment/Draft 1.docx|Strategic management / Draft 1]]
 - [[raw/cambridge/Electives/Strategic management/Supervisions & assessment/Assessment/Notes on consumer trends.docx|Strategic management / Notes on consumer trends]]
-- [[raw/cambridge/Electives/Strategic management/Supervisions & assessment/Assessment/The future of hospitality - Why 2021 is the year of the hybrid.pdf|Strategic management / The future of hospitality - Why 2021 is the year of the hybrid]]
+- [[withheld/The future of hospitality - Why 2021 is the year of the hybrid (pdf)|Strategic management / The future of hospitality - Why 2021 is the year of the hybrid (kept local)]]
 - [[raw/cambridge/Electives/Strategic management/Supervisions & assessment/Assessment/Why 2021 is the year of the hybrid.docx|Strategic management / Why 2021 is the year of the hybrid]]
 - [[raw/cambridge/Electives/Strategic management/Supervisions & assessment/Group essay.docx|Strategic management / Group essay]]
 - [[raw/cambridge/Electives/Strategic management/Supervisions & assessment/Supervision 1.docx|Strategic management / Supervision 1]]

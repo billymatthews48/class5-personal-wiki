@@ -43,9 +43,9 @@ Billy's coursework in Marketing covered foundational concepts such as the 3 Cs (
 - [[raw/cambridge/First week/MS6 Marketing/Supervisions/Billy_Matthews_Supervision2.docx|MS6 Marketing / Billy_Matthews_Supervision2]]
 - [[raw/cambridge/First week/MS6 Marketing/Supervisions/MS6_Group7_BillyMatthews.pdf|MS6 Marketing / MS6_Group7_BillyMatthews]]
 - [[raw/mba/Marketing/Assignment.docx|Marketing / Assignment]]
-- [[raw/mba/Marketing/Bruno marketing guide.pdf|Marketing / Bruno marketing guide]]
-- [[raw/mba/Marketing/Copy of Marketing Cheat Sheet.pdf|Marketing / Copy of Marketing Cheat Sheet]]
-- [[raw/mba/Marketing/Marketing Summary - Sarah.pdf|Marketing / Marketing Summary - Sarah]]
+- [[withheld/Bruno marketing guide (pdf)|Marketing / Bruno marketing guide (kept local)]]
+- [[withheld/Copy of Marketing Cheat Sheet (pdf)|Marketing / Copy of Marketing Cheat Sheet (kept local)]]
+- [[withheld/Marketing Summary - Sarah (pdf)|Marketing / Marketing Summary - Sarah (kept local)]]
 
 ## My Notes
 

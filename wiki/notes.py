@@ -85,6 +85,77 @@ def source_label(raw_path):
     return f"{near} / {stem}" if near else stem
 
 
+# ---------------- withheld originals ----------------
+# Some originals stay on the owner's machine (third-party material, other people's words) and are
+# git-ignored. Notes link to a committed stub page for each one instead of to the missing file,
+# so every source link resolves in a clone of the repository.
+
+WITHHELD_FILE = config.ROOT / "withheld.yaml"
+WITHHELD_DIR = config.VAULT / "withheld"
+
+
+def load_withheld():
+    if not WITHHELD_FILE.exists():
+        return {}
+    data = yaml.safe_load(WITHHELD_FILE.read_text(encoding="utf-8")) or {}
+    return {w["path"]: w for w in data.get("withheld", [])}
+
+
+def stub_target(raw_path):
+    """Vault-relative link target (no .md) of the stub page for a withheld original.
+    Dots are removed from the name so Obsidian does not mistake part of it for a file extension."""
+    p = PurePosixPath(raw_path)
+    name = f"{p.stem.replace('.', '').strip()} ({p.suffix.lstrip('.').lower()})"
+    return f"withheld/{name}"
+
+
+def source_link(raw_path, withheld=None, table=False):
+    """Wikilink to an original, or to its stub page if the original is withheld from the repo."""
+    withheld = load_withheld() if withheld is None else withheld
+    bar = "\\|" if table else "|"
+    if raw_path in withheld:
+        return f"[[{stub_target(raw_path)}{bar}{source_label(raw_path)} (kept local)]]"
+    return f"[[{raw_path}{bar}{source_label(raw_path)}]]"
+
+
+def write_withheld_stubs(report, titles):
+    """(Re)write one stub page per withheld original and point existing note links at the stubs."""
+    withheld = load_withheld()
+    by_path = {r["raw_path"]: r for r in report}
+    WITHHELD_DIR.mkdir(parents=True, exist_ok=True)
+    wanted = set()
+    for path, w in withheld.items():
+        r = by_path.get(path, {})
+        note = titles.get(r.get("subject"))
+        stub = config.VAULT / (stub_target(path) + ".md")
+        wanted.add(stub.name)
+        lines = ["---", "type: withheld source", f"original_path: \"{path}\"",
+                 f"sha256: {r.get('sha256', 'unknown')}", "---",
+                 f"# {stub.stem}", "",
+                 "**This original file is kept on my machine and is not published in this repository.**", "",
+                 f"- **What it is:** {w['what']}",
+                 f"- **Why it is not here:** {w['reason']}",
+                 f"- **Original path:** `{path}`",
+                 f"- **Fingerprint (sha256):** `{r.get('sha256', 'unknown')}`",
+                 f"- **Passages indexed locally:** {r.get('passages', 'unknown')}",
+                 f"- **Used by note:** {'[[' + note + ']]' if note else '(none)'}", "",
+                 "On my machine the file is still indexed, so `wiki search` and `wiki ask` can find and cite its "
+                 "passages. In a clone of this repository those passages are not available.", ""]
+        stub.write_text("\n".join(lines), encoding="utf-8")
+    for old in WITHHELD_DIR.glob("*.md"):
+        if old.name not in wanted:
+            old.unlink()
+    # Point links in existing notes at the stubs (idempotent; new notes already use source_link).
+    for p in all_notes():
+        t = p.read_text(encoding="utf-8")
+        t2 = t
+        for path in withheld:
+            t2 = re.sub(rf"\[\[{re.escape(path)}\|[^\]]*\]\]", lambda m, p=path: source_link(p, withheld), t2)
+        if t2 != t:
+            p.write_text(t2, encoding="utf-8")
+    return len(withheld)
+
+
 # ---------------- generation ----------------
 
 NOTE_SCHEMA = {
@@ -128,15 +199,16 @@ def generate_note(client, subject, excerpts, other_titles):
 
 def render_note(subject, data, excerpts, files, other_titles, my_notes="", reviewed=False):
     label = {f"S{i}": f for i, (f, _) in enumerate(excerpts, 1)}
+    withheld = load_withheld()
     ideas = []
     for item in data.get("key_ideas", []):
         src = label.get(item.get("source", "").strip("[] "))
-        ref = f" ([[{src}|{source_label(src)}]])" if src else ""
+        ref = f" ({source_link(src, withheld)})" if src else ""
         idea = re.sub(r"\s*\[S\d+\]", "", item["idea"]).strip()   # labels belong in the link, not the text
         ideas.append(f"- {idea}{ref}")
     related = [f"- [[{r['note']}]]: {r['reason'].strip()}" for r in data.get("related", [])
                if r.get("note") in other_titles and r.get("note") != subject.title]
-    sources = [f"- [[{f}|{source_label(f)}]]" for f in sorted(files)]
+    sources = [f"- {source_link(f, withheld)}" for f in sorted(files)]
     meta = {"subject_key": subject.key, "wiki_id": f"subj-{subject.key}", "topic": subject.folder,
             "source_count": len(files), "generated_by": config.CHAT_MODEL,
             "generated": date.today().isoformat(), "reviewed": reviewed}
@@ -169,16 +241,24 @@ def write_indexes(subjects, report):
     titles = {s.key: s.title for s in subjects}
     catalog = json.loads((config.STATE / "raw_catalog.json").read_text(encoding="utf-8")) \
         if (config.STATE / "raw_catalog.json").exists() else {}
+    withheld = load_withheld()
     cat = ["# Source Catalog", "",
            "Every original file in `raw/`, unchanged. `sha256` is the fingerprint of the file; "
            "`passages` is how many retrieval passages it produced (0 = scanned, no text layer).", "",
+           f"{len(withheld)} originals are kept on my machine and not published (third-party material, or other "
+           "people's words). They are marked \"kept local\" and link to a page that says what the file is and why "
+           "it is not here.", "",
            "| Original | Origin | Passages | Note | sha256 |", "|---|---|---|---|---|"]
     for r in sorted(report, key=lambda r: r["raw_path"]):
         origin = catalog.get(r["raw_path"], {}).get("origin", "added later")
         note = f"[[{titles[r['subject']]}]]" if r["subject"] in titles else "(none)"
-        cat.append(f"| [[{r['raw_path']}\\|{PurePosixPath(r['raw_path']).name}]] | {origin} | "
+        name = PurePosixPath(r["raw_path"]).name
+        link = (f"[[{stub_target(r['raw_path'])}\\|{name} (kept local)]]" if r["raw_path"] in withheld
+                else f"[[{r['raw_path']}\\|{name}]]")
+        cat.append(f"| {link} | {origin} | "
                    f"{r['passages'] or '0 (no text layer)'} | {note} | `{r['sha256'][:12]}` |")
     (config.VAULT / "Source Catalog.md").write_text("\n".join(cat) + "\n", encoding="utf-8")
+    write_withheld_stubs(report, titles)
 
 
 # ---------------- lint ----------------
@@ -187,6 +267,11 @@ def lint():
     problems = []
     titles = {p.stem: p for p in all_notes()}
     incoming = {t: 0 for t in titles}
+    withheld = load_withheld()
+    ignored = {l.strip() for l in (config.ROOT / ".gitignore").read_text(encoding="utf-8").splitlines()} \
+        if (config.ROOT / ".gitignore").exists() else set()
+    problems += [f"withheld.yaml: {path} is not listed in .gitignore" for path in withheld
+                 if f"vault/{path}" not in ignored]
     for p in all_notes():
         meta, body = read_note(p)
         h1 = re.search(r"^# (.+)$", body, re.M)
@@ -202,6 +287,12 @@ def lint():
             if target.startswith("raw/"):
                 if not (config.VAULT / target).exists():
                     problems.append(f"{p.name}: broken source link {target}")
+                elif target in withheld:
+                    problems.append(f"{p.name}: links straight to a withheld original ({target}); "
+                                    f"run `wiki ingest` so it points at the stub page")
+            elif target.startswith("withheld/"):
+                if not (config.VAULT / (target + ".md")).exists():
+                    problems.append(f"{p.name}: broken link to withheld-source page {target}")
             elif target in titles:
                 if target != p.stem:
                     incoming[target] += 1

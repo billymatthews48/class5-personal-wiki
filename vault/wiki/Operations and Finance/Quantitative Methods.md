@@ -34,7 +34,7 @@ Billy's coursework in Quantitative Methods covered fundamental statistical conce
 - [[raw/cambridge/Exams/MS2 Quantitative Methods/Supervisions/Billy_Matthews_MS2_Supervision2_Group34.pdf|MS2 Quantitative Methods / Billy_Matthews_MS2_Supervision2_Group34]]
 - [[raw/cambridge/Exams/MS2 Quantitative Methods/Supervisions/Billy_Matthews_MS2_Supervision3_Group34.pdf|MS2 Quantitative Methods / Billy_Matthews_MS2_Supervision3_Group34]]
 - [[raw/cambridge/Exams/MS2 Quantitative Methods/Supervisions/Billy_Matthews_MS2_Supervision4_Group34.pdf|MS2 Quantitative Methods / Billy_Matthews_MS2_Supervision4_Group34]]
-- [[raw/cambridge/Exams/MS2 Quantitative Methods/normal distribution table.pdf|MS2 Quantitative Methods / normal distribution table]]
+- [[withheld/normal distribution table (pdf)|MS2 Quantitative Methods / normal distribution table (kept local)]]
 
 ## My Notes
 

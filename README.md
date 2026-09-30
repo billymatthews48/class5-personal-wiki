@@ -33,8 +33,14 @@ The wiki lets me find and question my coursework and projects across two degrees
 [Power and Influence](vault/wiki/People%20and%20Leadership/Power%20and%20Influence.md) ("BATNAs as a source of power") →
 its source `raw/mba/Power and Pol essay.docx`.
 
-**Not in the repo:** some third-party files (a textbook, classmates' summaries, interview transcripts with other people's
-words) are kept local through `.gitignore`. They are still listed in the catalog, so their links resolve only on my machine.
+**Not in the repo:** 12 originals are kept on my machine ([withheld.yaml](withheld.yaml)): third-party material I cannot
+republish (a textbook, an industry report, other people's summaries) and notes containing other people's words from
+interviews and focus groups.
+- Notes and the catalog link to a stub page for each one in [`vault/withheld/`](vault/withheld), marked "kept local". The stub
+  says what the file is, why it is not here, its sha256 and which note uses it.
+- So every source link in a clone of this repo resolves. I checked this on a fresh clone
+  ([evidence/clone-link-check.md](evidence/clone-link-check.md)).
+- Locally the files are still indexed. Answers on my machine can cite passages from them that a clone cannot open.
 
 ## 2. Setup and device
 

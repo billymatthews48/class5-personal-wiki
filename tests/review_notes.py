@@ -46,14 +46,17 @@ def main():
            "Rows under 60% in the cited file, or with a missing quoted phrase, were opened and checked by hand.", "",
            "| Note | Idea (start) | Cited file | In cited | In subject | Missing terms |", "|---|---|---|---|---|---|"]
     flagged = 0
+    stub_to_raw = {notes.stub_target(path): path for path in notes.load_withheld()}
     for p in notes.all_notes():
         meta, body = notes.read_note(p)
         for line in notes.section(body, "Key ideas").splitlines():
-            m = re.search(r"\(\[\[(raw/[^|\]]+)\|([^\]]*)\]\]\)", line)
-            idea = re.sub(r"\(\[\[raw/.*$", "", line).lstrip("- ").strip()
+            m = re.search(r"\(\[\[((?:raw|withheld)/[^|\]]+)\|([^\]]*)\]\]\)", line)
+            idea = re.sub(r"\(\[\[(?:raw|withheld)/.*$", "", line).lstrip("- ").strip()
             quoted, words = terms(idea)
             subj_text = by_subject.get(meta.get("subject_key"), "")
-            cited_text = by_file.get(m.group(1), "") if m else ""
+            # a link to a withheld-source stub page stands for the original it describes
+            cited = stub_to_raw.get(m.group(1), m.group(1)) if m else None
+            cited_text = by_file.get(cited, "") if m else ""
             c_cov, c_missing = coverage(words, cited_text) if m else (0.0, words)
             s_cov, _ = coverage(words, subj_text)
             q_missing = [q for q in quoted if q.lower() not in (cited_text or subj_text).lower()]

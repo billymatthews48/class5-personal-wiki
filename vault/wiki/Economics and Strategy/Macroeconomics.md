@@ -39,7 +39,7 @@ This collection of notes covers various aspects of Macroeconomics, ranging from 
 - [[raw/cambridge/Electives/Macroeconomics/Lectures/Week 4.docx|Macroeconomics / Week 4]]
 - [[raw/cambridge/Electives/Macroeconomics/Lectures/Week 5.docx|Macroeconomics / Week 5]]
 - [[raw/cambridge/Electives/Macroeconomics/Supervision 2.docx|Macroeconomics / Supervision 2]]
-- [[raw/cambridge/Electives/Macroeconomics/Syllabus and reading list.pdf|Macroeconomics / Syllabus and reading list]]
+- [[withheld/Syllabus and reading list (pdf)|Macroeconomics / Syllabus and reading list (kept local)]]
 
 ## My Notes
 

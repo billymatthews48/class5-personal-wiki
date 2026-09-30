@@ -34,7 +34,7 @@ Billy's coursework in Operations Management covered core concepts such as qualit
 - [[raw/cambridge/First week/MS5 Operations Management/Exam/Essay 2/Digitalisation in the news.docx|MS5 Operations Management / Digitalisation in the news]]
 - [[raw/cambridge/First week/MS5 Operations Management/Exam/Essay 2/First draft.docx|MS5 Operations Management / First draft]]
 - [[raw/cambridge/First week/MS5 Operations Management/Exam/Essay 2/Initial Plan.docx|MS5 Operations Management / Initial Plan]]
-- [[raw/cambridge/First week/MS5 Operations Management/Lectures/Lean Terminology.pdf|MS5 Operations Management / Lean Terminology]]
+- [[withheld/Lean Terminology (pdf)|MS5 Operations Management / Lean Terminology (kept local)]]
 - [[raw/cambridge/First week/MS5 Operations Management/Lectures/Week 1 - Value Creation.docx|MS5 Operations Management / Week 1 - Value Creation]]
 - [[raw/cambridge/First week/MS5 Operations Management/Lectures/Week 2 - Zara and processes.docx|MS5 Operations Management / Week 2 - Zara and processes]]
 - [[raw/cambridge/First week/MS5 Operations Management/Lectures/Week 3 - Process design and digitalisation.docx|MS5 Operations Management / Week 3 - Process design and digitalisation]]

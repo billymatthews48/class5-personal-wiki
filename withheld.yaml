@@ -1,0 +1,45 @@
+# Original files that stay on my machine and are NOT published in the repository.
+# Each is also listed in .gitignore. `wiki ingest` writes a stub page for each one under
+# vault/withheld/, and notes link to the stub, so no source link is dead in a clone of the repo.
+# The files are still indexed locally, so search and ask can use and cite them on my machine.
+
+third_party: &third_party "Third-party material that I do not have the right to republish."
+other_people: &other_people "Contains other people's words from interviews and focus groups, recorded for a client project."
+
+withheld:
+  - path: "raw/cambridge/Exams/MS4 Finance and accounting/Lectures/Dauderis, H. and Annand, D. (2014) Introduction to Financial Accounting.pdf"
+    what: "Textbook: Dauderis, H. and Annand, D. (2014), Introduction to Financial Accounting."
+    reason: *third_party
+  - path: "raw/cambridge/Electives/Strategic management/Supervisions & assessment/Assessment/The future of hospitality - Why 2021 is the year of the hybrid.pdf"
+    what: "Industry report: The future of hospitality - Why 2021 is the year of the hybrid."
+    reason: *third_party
+  - path: "raw/cambridge/Electives/Macroeconomics/Syllabus and reading list.pdf"
+    what: "Course syllabus and reading list for the Macroeconomics elective (not written by me)."
+    reason: *third_party
+  - path: "raw/cambridge/Exams/MS2 Quantitative Methods/normal distribution table.pdf"
+    what: "A normal distribution table (reference material, not written by me)."
+    reason: *third_party
+  - path: "raw/cambridge/First week/MS5 Operations Management/Lectures/Lean Terminology.pdf"
+    what: "A lean terminology reference (not written by me)."
+    reason: *third_party
+  - path: "raw/cambridge/Mott Project/Mott's old project ppt.pptx"
+    what: "Slides from an earlier (2018) student team's project for the same client."
+    reason: *third_party
+  - path: "raw/cambridge/Mott Project/Focus Group Transcripts.docx"
+    what: "Notes of what focus-group participants said."
+    reason: *other_people
+  - path: "raw/cambridge/Mott Project/Interview answers.docx"
+    what: "Notes of interviewees' answers."
+    reason: *other_people
+  - path: "raw/cambridge/Mott Project/Grad interview notes.docx"
+    what: "Notes from interviews with graduates."
+    reason: *other_people
+  - path: "raw/mba/Marketing/Marketing Summary - Sarah.pdf"
+    what: "A marketing summary written by someone else."
+    reason: *third_party
+  - path: "raw/mba/Marketing/Bruno marketing guide.pdf"
+    what: "A marketing guide written by someone else."
+    reason: *third_party
+  - path: "raw/mba/Marketing/Copy of Marketing Cheat Sheet.pdf"
+    what: "A shared marketing cheat sheet that I did not write."
+    reason: *third_party
