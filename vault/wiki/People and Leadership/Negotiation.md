@@ -5,7 +5,7 @@ topic: People and Leadership
 source_count: 7
 generated_by: gemma4:e4b-it-q4_K_M
 generated: '2026-09-29'
-reviewed: false
+reviewed: true
 ---
 # Negotiation
 
@@ -20,9 +20,8 @@ Billy's coursework for the Negotiations elective module involved reflecting on t
 - Active listening, demonstrated by techniques like mirroring, helps show empathy and encourages the other party to reveal more information. ([[raw/cambridge/Electives/Negotiations/Assesment/Readings.docx|Negotiations / Readings]])
 
 ## Related
-- [[Power and Influence]]: Both subjects discuss concepts related to increasing influence through negotiation tactics.
-- [[Organizational Behaviour]]: Both subjects touch upon how emotions and behavior impact interactions, such as in negotiations.
-- [[Strategic Management]]: Both subjects involve systematic planning and analysis to achieve desired outcomes.
+- [[Leading People]]: Reservation price and ZOPA are taught to the AI student in Leading People; the negotiation journal applies the related ideas of walk-away price and BATNA in the Salt Harbour, MedLee and Harborco exercises.
+- [[Power and Influence]]: The negotiation journal uses power-dependence theory (BATNAs as a source of power); the Power and Influence essays analyse sources of power at Bain.
 
 ## Sources
 - [[raw/cambridge/Electives/Negotiations/Assesment/1114L_NW_JOURNAL.pdf|Negotiations / 1114L_NW_JOURNAL]]

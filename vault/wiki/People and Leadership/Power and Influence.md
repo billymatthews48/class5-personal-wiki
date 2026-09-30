@@ -5,7 +5,7 @@ topic: People and Leadership
 source_count: 3
 generated_by: gemma4:e4b-it-q4_K_M
 generated: '2026-09-29'
-reviewed: false
+reviewed: true
 ---
 # Power and Influence
 
@@ -19,9 +19,9 @@ Billy's coursework on Power and Influence, presented in an MBA essay, analyzes t
 - In competitive settings, competence is often baseline, making the combination of competence with relational warmth a key differentiator. ([[raw/mba/Power pol assignment 2.docx|MBA / Power pol assignment 2]])
 
 ## Related
-- [[Negotiation]]: Both subjects discuss the necessity of persuading others to act on recommendations, which is central to negotiation.
-- [[Organizational Behaviour]]: The analysis of power dynamics, social capital, and interpersonal influence aligns closely with concepts in organizational behaviour.
-- [[Leading People]]: The focus on building influence through traits like likeability and credibility relates directly to leading people effectively.
+- [[Negotiation]]: BATNAs as a source of power in the negotiation journal connect to the essay's analysis of formal and informal power.
+- [[Organizational Behaviour]]: The essay's informal power sources (expertise, social capital) relate to the OB notes' definition of leadership as influencing others.
+- [[Technology Adoption Curves]]: Both essays are framed around Billy's post-MBA consulting role at Bain.
 
 ## Sources
 - [[raw/mba/Power and Pol essay.docx|MBA / Power and Pol essay]]

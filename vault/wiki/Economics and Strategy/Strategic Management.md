@@ -5,23 +5,24 @@ topic: Economics and Strategy
 source_count: 21
 generated_by: gemma4:e4b-it-q4_K_M
 generated: '2026-09-29'
-reviewed: false
+reviewed: true
 ---
 # Strategic Management
 
 This collection of notes covers the core concepts of Strategic Management, ranging from classical strategy definitions to modern concepts like blue ocean strategy and platform dynamics. The material explores how firms define their scope and approach to success, examining factors affecting profitability and how companies navigate industry disruptions.
 
 ## Key ideas
-- Strategy is defined as objectives, policies, and plans that set the enterprise's scope and approach to survival and success. [S1, S11]
+- Strategy is defined as objectives, policies, and plans that set the enterprise's scope and approach to survival and success. ([[raw/cambridge/Electives/Strategic management/Crib sheet.docx|Strategic management / Crib sheet]])
 - Profitability is influenced by industry effects, firm capabilities, and the firm's positioning. ([[raw/cambridge/Electives/Strategic management/Crib sheet.docx|Strategic management / Crib sheet]])
 - Corporate strategy involves conglomerates deciding which businesses to be in and how many, aiming to create value beyond individual businesses. ([[raw/cambridge/Electives/Strategic management/Lectures/Week 4- Corporate strategy.docx|Strategic management / Week 4- Corporate strategy]])
-- Hybrid hotel models are proposed as a way for the hospitality industry to navigate Covid-19 disruption better than traditional models or Airbnb. [S2, S3, S4]
+- Hybrid hotel models are proposed as a way for the hospitality industry to navigate Covid-19 disruption better than traditional models or Airbnb. ([[raw/cambridge/Electives/Strategic management/Supervisions & assessment/Assessment/1114L-MSE12-INDIVIDUAL-ESSAY.docx|Strategic management / 1114L-MSE12-INDIVIDUAL-ESSAY]])
 - Successful platforms require managing quality alongside quantity of users, and raising switching costs is a key tactic. ([[raw/cambridge/Electives/Strategic management/Lectures/Week 7 - Strategic trade-offs online.docx|Strategic management / Week 7 - Strategic trade-offs online]])
 - Network effects increase value exponentially as the number of unique connections grows, raising barriers to entry. ([[raw/cambridge/Electives/Strategic management/Lectures/Week 3 - Blue Ocean Strategy.docx|Strategic management / Week 3 - Blue Ocean Strategy]])
 
 ## Related
-- [[Marketing Strategy]]: The discussion on how hotels should focus on order winners, qualifiers, and losers relates to market positioning.
-- [[Technology Adoption Curves]]: The notes discuss technological disruption and how industries are collapsing into ecosystems.
+- [[Macroeconomics]]: The individual essay on hybrid hotels is set in the Covid-19 disruption that the macroeconomics essay explains as a global recession.
+- [[Microeconomics]]: Porter's 5 Forces in the crib sheet (barriers to entry, rivalry) covers the same industry-structure ideas as the microeconomics work on market power and concentration.
+- [[Technology Adoption Curves]]: Week 5 (disruption strategy) and the technology essay both deal with how strategy must change as a technology matures.
 
 ## Sources
 - [[raw/cambridge/Electives/Strategic management/Crib sheet.docx|Strategic management / Crib sheet]]

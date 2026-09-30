@@ -1,0 +1,42 @@
+---
+subject_key: mott-macdonald-project
+wiki_id: subj-mott-macdonald-project
+topic: Projects
+source_count: 12
+generated_by: gemma4:e4b-it-q4_K_M
+generated: '2026-09-30'
+reviewed: false
+---
+# Mott MacDonald Consulting Project
+
+Billy's coursework involved a consulting project for Mott MacDonald, focusing on defining the 'Office of the Future.' The project utilized qualitative research methods, such as focus groups and interviews, to understand employee needs regarding working arrangements and organizational culture. The output included project initiation documents and discussion drafts synthesizing stakeholder feedback.
+
+## Key ideas
+- The project aimed to determine what the future multi-disciplinary consultancy office should look like. ([[raw/cambridge/Mott Project/Mott's old project ppt.pptx|Mott Project / Mott's old project ppt]])
+- Focus groups were held to gauge employees' feelings and desires regarding working arrangements post-lockdown. ([[raw/cambridge/Mott Project/Discussion draft.docx|Mott Project / Discussion draft]])
+- The project sought to answer if working arrangements optimize employee wellbeing and productivity to create a competitive advantage. ([[raw/cambridge/Mott Project/Notes on framework.docx|Mott Project / Notes on framework]])
+- Employee feedback revealed conflicting views on working from home, balancing benefits like avoiding commutes against missing face-to-face contact. ([[raw/cambridge/Mott Project/Focus Group Transcripts.docx|Mott Project / Focus Group Transcripts]])
+- Mott MacDonald's culture is described as open, close-knit, and non-hierarchical, with mutual respect for expertise. ([[raw/cambridge/Mott Project/Interview answers.docx|Mott Project / Interview answers]])
+- The project framework considered task type and workforce composition when determining potential for remote work. ([[raw/cambridge/Mott Project/Notes on framework.docx|Mott Project / Notes on framework]])
+
+## Related
+- [[Organizational Behaviour]]: Both subjects examine employee attitudes and the impact of working arrangements on the workforce.
+- [[Operations Management]]: Both involve defining the optimal structure and function of a workplace environment.
+- [[Strategic Management]]: Both explore how organizational structures can create a competitive advantage.
+
+## Sources
+- [[raw/cambridge/Electives/Project/PID.docx|Project / PID]]
+- [[raw/cambridge/Electives/Project/Project management.docx|Project / Project management]]
+- [[raw/cambridge/Mott Project/Articles.docx|Mott Project / Articles]]
+- [[raw/cambridge/Mott Project/Discussion draft.docx|Mott Project / Discussion draft]]
+- [[raw/cambridge/Mott Project/Focus Group Transcripts.docx|Mott Project / Focus Group Transcripts]]
+- [[raw/cambridge/Mott Project/Grad interview notes.docx|Mott Project / Grad interview notes]]
+- [[raw/cambridge/Mott Project/Interview answers.docx|Mott Project / Interview answers]]
+- [[raw/cambridge/Mott Project/Intro and project definition .docx|Mott Project / Intro and project definition]]
+- [[raw/cambridge/Mott Project/Mott's old project ppt.pptx|Mott Project / Mott's old project ppt]]
+- [[raw/cambridge/Mott Project/Notes from first few meetings.docx|Mott Project / Notes from first few meetings]]
+- [[raw/cambridge/Mott Project/Notes on framework.docx|Mott Project / Notes on framework]]
+- [[raw/cambridge/Mott Project/Plan - focus group discussion.docx|Mott Project / Plan - focus group discussion]]
+
+## My Notes
+

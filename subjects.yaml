@@ -129,5 +129,10 @@ subjects:
   - key: energy-transition
     title: Energy Transition
     folder: Economics and Strategy
-    sources: [raw/added/**]
+    sources: [raw/added/Energy Transition Memo.docx]
 
+
+  - key: netflix-sports-strategy
+    title: Netflix Live Sports Strategy
+    folder: Projects
+    sources: [raw/added/Netflix Live Sports Strategy.docx]

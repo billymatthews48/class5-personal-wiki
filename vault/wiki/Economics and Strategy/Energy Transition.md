@@ -5,7 +5,7 @@ topic: Economics and Strategy
 source_count: 1
 generated_by: gemma4:e4b-it-q4_K_M
 generated: '2026-09-29'
-reviewed: false
+reviewed: true
 ---
 # Energy Transition
 
@@ -19,8 +19,7 @@ Billy produced an Energy Transition Memo that analyzes the shift in the energy l
 - Mid-sized firms are identified as being least equipped to handle the complexities of making energy procurement decisions. ([[raw/added/Energy Transition Memo.docx|Added / Energy Transition Memo]])
 
 ## Related
-- [[Microeconomics]]: Both deal with how firms respond to prices: the memo covers electricity buying decisions by mid-sized firms, and the microeconomics notes cover pricing and market power. (Link added by hand during review.)
-- [[Strategic Management]]: The memo analyzes the broader landscape of the energy transition, which involves strategic shifts in energy sourcing.
+- [[Microeconomics]]: The memo has firms buying electricity from competing retail suppliers and negotiating price and quantity bands; the microeconomics notes cover competition, pricing and market power.
 
 ## Sources
 - [[raw/added/Energy Transition Memo.docx|Added / Energy Transition Memo]]

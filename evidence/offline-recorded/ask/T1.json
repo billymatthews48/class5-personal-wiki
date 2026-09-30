@@ -1,0 +1,86 @@
+{
+  "mode": "ask",
+  "execution": "local",
+  "model": "gemma4:e4b-it-q4_K_M",
+  "embed_model": "embeddinggemma",
+  "runtime": "Ollama at http://localhost:11434",
+  "time": "2026-09-30T00:38:13",
+  "question": "According to my personal development notes, what are the three components of career success and how much does each matter?",
+  "retrieved": [
+    {
+      "rank": 1,
+      "text": "Personal development\nMinimum likeability threshold to even be considered for a project. Hence the important of building relationships\nPerformance, image, and exposure (who knows you) are the three components to success\n10% performance, image (30%) and exposure (60%) are more critical\nNetworks\nDunbar’s number is 150 (average network size). Can be stratified by emotional intensity\n5: innermost circle\n15: sympathy group\n50: close friends\n150: casual friends\n450-600: acquaintances\nKing – 3 basic categories of networks\nExpansionists who are well connected with extraordinarily large networks. Can’t leverage ties as well\nIdentify super-connecters and develop relationships with them!!!\nReciprocity is important; try to offer things in relationships\nBrokers generate value by brining together typically disconnected parties from different social worlds. Bring information benefits. Smaller number of deeper links",
+      "raw_path": "raw/cambridge/Electives/Personal development/Session 1.docx",
+      "locator": "section 'Personal development'",
+      "note_title": "Career Networking and Visibility",
+      "note_path": "wiki/People and Leadership/Career Networking and Visibility.md",
+      "bm25": 16.85,
+      "cosine": 0.556,
+      "score": 0.0331,
+      "method": "hybrid (BM25 + embeddinggemma)"
+    },
+    {
+      "rank": 2,
+      "text": "The need for achievement is the need to achieve personal goals and success. Octopus’ practices satisfy employees’ nAch by allocating 30% of working hours to self-selected projects and personal development. Presuming these self-selected tasks are performed successfully, employees will be able to achieve their personal goals. Second, the need for power refers to the need to influence the behaviour of others. Octopus employees can satisfy their nPow by leading their own projects because, in doing so, they will instruct their colleagues to perform tasks in pursuit of their self-selected goal. Third, the need for affiliation is the need for employees to have close interpersonal relationships. nAff is comparable to Maslow’s belongingness need; Octopus’ social gatherings should satisfy employees’ nAff as these environments are conducive to relationship-forming.",
+      "raw_path": "raw/cambridge/Week 2/OB Question/1114l_MS1_ESSAY.docx",
+      "locator": "opening",
+      "note_title": "Organizational Behaviour",
+      "note_path": "wiki/People and Leadership/Organizational Behaviour.md",
+      "bm25": 13.52,
+      "cosine": 0.404,
+      "score": 0.0295,
+      "method": "hybrid (BM25 + embeddinggemma)"
+    },
+    {
+      "rank": 3,
+      "text": "Moving up the hierarchy, esteem needs include the desire for self-respect and peer recognition. Octopus allows employees to spend 30% of working hours on personal development, or creating and leading their own projects. Employees can develop their self-respect by improving their skills through personal development, and can also gain peer recognition where selected to lead their own projects. To further satisfy esteem needs, Octopus’ managers should recognise the success of employee-led projects. These same policies will also satisfy employees’ need for self-actualisation. The freedom to pursue personal development, perhaps guided by a mentor, will enable employees to achieve their full potential. The freedom to design their own projects empowers employees to implement their own creative ideas, another component of self-actualisation.",
+      "raw_path": "raw/cambridge/Week 2/OB Question/1114l_MS1_ESSAY.docx",
+      "locator": "opening",
+      "note_title": "Organizational Behaviour",
+      "note_path": "wiki/People and Leadership/Organizational Behaviour.md",
+      "bm25": 15.76,
+      "cosine": 0.387,
+      "score": 0.0285,
+      "method": "hybrid (BM25 + embeddinggemma)"
+    },
+    {
+      "rank": 4,
+      "text": "Octopus’ practices satisfy Maslow’s higher -order needs; therefore, this theory would conclude its employees will be highly motivated. McClelland's Three Needs Theory McClelland posits individuals are universally motivated by the need for achievement (nAch), power (nPow) and affiliation (nAff) (Robbins and Judge, 2019). The need for achievement is the need to achieve personal goals and success. Octopus’ practices satisfy employees’ nAch by allocating 30% of working hours to self -selected projects and personal development. Presuming these self-selected tasks are performed successfully, employees will be able to achieve their personal goals. Second, the need for power refers to the need to influence the behaviour of others.",
+      "raw_path": "raw/cambridge/Week 2/OB Question/1114l_MS1_ESSAY.pdf",
+      "locator": "page 3",
+      "note_title": "Organizational Behaviour",
+      "note_path": "wiki/People and Leadership/Organizational Behaviour.md",
+      "bm25": 17.16,
+      "cosine": 0.378,
+      "score": 0.0283,
+      "method": "hybrid (BM25 + embeddinggemma)"
+    }
+  ],
+  "best_cosine": 0.556,
+  "model_called": true,
+  "stats": {
+    "model": "gemma4:e4b-it-q4_K_M",
+    "wall_s": 8.24,
+    "ttft_s": 3.04,
+    "load_s": 0.01,
+    "prompt_tokens": 1085,
+    "prompt_tok_s": 1258.0,
+    "gen_tokens": 46,
+    "gen_tok_s": 8.8,
+    "tool_calls": []
+  },
+  "raw_answer": "The three components to success are performance, image, and exposure [1]. These components matter with the following weights: performance is 10%, image is 30%, and exposure is 60% [1].",
+  "prompt_chars": 4856,
+  "evidence_passages": 4,
+  "status": "answered",
+  "answer": "The three components to success are performance, image, and exposure [1]. These components matter with the following weights: performance is 10%, image is 30%, and exposure is 60% [1].",
+  "citations": [
+    1
+  ],
+  "invalid_citations": [],
+  "gate": null,
+  "sources": [
+    "[1] raw/cambridge/Electives/Personal development/Session 1.docx (section 'Personal development') | note: [[Career Networking and Visibility]]"
+  ],
+  "saved_to": "C:\\Users\\billy\\Agentic AI\\class5-personal-wiki\\.wiki\\runs\\ask\\20260930-003824-295.md"
+}

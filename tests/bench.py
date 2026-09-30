@@ -36,10 +36,11 @@ class MemSampler:
         self._stop = threading.Event()
 
     def _ollama_rss(self):
+        # The weights live in Ollama's runner process (llama-server.exe), not in ollama.exe itself.
         total = 0
         for p in psutil.process_iter(["name"]):
             try:
-                if (p.info["name"] or "").lower().startswith("ollama"):
+                if (p.info["name"] or "").lower().startswith(("ollama", "llama-server")):
                     total += p.memory_info().rss
             except (psutil.NoSuchProcess, psutil.AccessDenied):
                 pass

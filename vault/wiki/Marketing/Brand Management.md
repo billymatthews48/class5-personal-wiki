@@ -5,7 +5,7 @@ topic: Marketing
 source_count: 7
 generated_by: gemma4:e4b-it-q4_K_M
 generated: '2026-09-29'
-reviewed: false
+reviewed: true
 ---
 # Brand Management
 
@@ -20,7 +20,7 @@ Billy explored brand management through two main lenses: developing a lifestyle 
 - The strategy for Quest involves launching an integrated campaign called 'It’s Basically Cheating' across multiple channels. ([[raw/mba/Marketing/OGSM Billy Matthews.pdf|Marketing / OGSM Billy Matthews]])
 
 ## Related
-- [[Marketing Strategy]]: Both Brand Management and Marketing Strategy involve defining and executing a singular brand position.
+- [[Marketing Strategy]]: The Tata Group assignment in Marketing Strategy compares 'branded house' and 'house of brands'; the Quest and Avocados from Mexico work here builds a single brand position.
 
 ## Sources
 - [[raw/mba/Marketing/Hwk 3.docx|Marketing / Hwk 3]]

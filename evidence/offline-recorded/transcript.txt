@@ -1,0 +1,147 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20260930003243
+Username: BILLY\billy
+RunAs User: BILLY\billy
+Configuration Name: 
+Machine: BILLY (Microsoft Windows NT 10.0.26200.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts\offline_demo.ps1 -Label offline-recorded -Source offline_source\Netflix Live Sports Strategy.docx -SearchQuery Netflix live sports broadcasting strategy
+Process ID: 19828
+PSVersion: 5.1.26100.9444
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.9444
+BuildVersion: 10.0.26100.9444
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is evidence\offline-recorded\transcript.txt
+
+===== 1. Device and time =====
+
+Wednesday, September 30, 2026 12:32:43 AM
+OS: Microsoft Windows 11 Pro 10.0.26200
+CPU: AMD Ryzen 5 7533HS with Radeon Graphics
+RAM total GB: 13.3 | free GB: 1.2
+GPU: AMD Radeon(TM) 660M
+
+===== 2. Proof the internet is disconnected =====
+
+
+
+Name                         Status
+----                         ------
+Ethernet                     Disconnected
+Bluetooth Network Connection Disconnected
+Wi-Fi                        Disconnected
+
+
+
+PS>TerminatingError(Resolve-DnsName): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: github.com : No DNS servers configured for local system"
+
+===== 3. Restart the local runtime (Ollama) =====
+PS>TerminatingError(Invoke-RestMethod): "The operation has timed out."
+PS>TerminatingError(Invoke-RestMethod): "The operation has timed out."
+PS>TerminatingError(Invoke-RestMethod): "The operation has timed out."
+PS>TerminatingError(Invoke-RestMethod): "The operation has timed out."
+PS>TerminatingError(Invoke-RestMethod): "The operation has timed out."
+PS>TerminatingError(Invoke-RestMethod): "The operation has timed out."
+PS>TerminatingError(Invoke-RestMethod): "The operation has timed out."
+PS>TerminatingError(Invoke-RestMethod): "The operation has timed out."
+PS>TerminatingError(Invoke-RestMethod): "The operation has timed out."
+PS>TerminatingError(Invoke-RestMethod): "The operation has timed out."
+PS>TerminatingError(Invoke-RestMethod): "The operation has timed out."
+PS>TerminatingError(Invoke-RestMethod): "The operation has timed out."
+PS>TerminatingError(Invoke-RestMethod): "The operation has timed out."
+PS>TerminatingError(Invoke-RestMethod): "The operation has timed out."
+PS>TerminatingError(Invoke-RestMethod): "The operation has timed out."
+PS>TerminatingError(Invoke-RestMethod): "The operation has timed out."
+PS>TerminatingError(Invoke-RestMethod): "The operation has timed out."
+PS>TerminatingError(Invoke-RestMethod): "The operation has timed out."
+PS>TerminatingError(Invoke-RestMethod): "The operation has timed out."
+PS>TerminatingError(Invoke-RestMethod): "The operation has timed out."
+PS>TerminatingError(Invoke-RestMethod): "The operation has timed out."
+PS>TerminatingError(Invoke-RestMethod): "The operation has timed out."
+PS>TerminatingError(Invoke-RestMethod): "The operation has timed out."
+PS>TerminatingError(Invoke-RestMethod): "The operation has timed out."
+PS>TerminatingError(Invoke-RestMethod): "The operation has timed out."
+PS>TerminatingError(Invoke-RestMethod): "The operation has timed out."
+PS>TerminatingError(Invoke-RestMethod): "The operation has timed out."
+PS>TerminatingError(Invoke-RestMethod): "The operation has timed out."
+PS>TerminatingError(Invoke-RestMethod): "The operation has timed out."
+PS>TerminatingError(Invoke-RestMethod): "The operation has timed out."
+ollama version is 0.35.0
+NAME                     ID              SIZE      MODIFIED      
+gemma4:e2b-it-q4_K_M     b37049369adf    4.6 GB    9 minutes ago    
+embeddinggemma:latest    85462619ee72    621 MB    3 hours ago      
+gemma4:e4b-it-q4_K_M     dc35e8d9c606    6.6 GB    3 hours ago
+
+===== 4. Restart the CLI: help and doctor =====
+  {search,ask,chat,ingest,lint,rename,doctor,serve,help}
+
+options:
+  -h, --help            show this help message and exit
+
+
+===== 5. Ingest a NEW local source while offline =====
+
+
+----- ingest the SAME source again: expect 0 notes written, no duplicates -----
+
+
+ComputerName TcpTestSucceeded
+------------ ----------------
+8.8.8.8                 False
+DNS: github.com could not be resolved (offline)
+Energy Transition.md
+Macroeconomics.md
+Microeconomics.md
+Strategic Management.md
+Technology Adoption Curves.md
+Brand Management.md
+Marketing Strategy.md
+Finance and Accounting.md
+Operations Management.md
+Quantitative Methods.md
+Business Communication.md
+Career Networking and Visibility.md
+Leading People.md
+Negotiation.md
+Organizational Behaviour.md
+Power and Influence.md
+Custom LLM Training.md
+Mott MacDonald Consulting Project.md
+Netflix Live Sports Strategy.md
+Secure Networking Tracker.md
+Management Studies Revision.md
+
+===== 6. Search (original passages, no model) =====
+
+
+===== 7. Ask (one example from the CLI) =====
+
+
+===== 7b. Chat from the CLI: capabilities, a draft, a follow-up =====
+
+
+===== 8. All four ask tests + chat/search mode checks =====
+
+
+===== 9. Memory in use after the run =====
+NAME                     ID              SIZE      PROCESSOR    CONTEXT    UNTIL              
+gemma4:e4b-it-q4_K_M     dc35e8d9c606    1.9 GB    100% CPU     8192       4 minutes from now    
+embeddinggemma:latest    85462619ee72    680 MB    100% CPU     2048       4 minutes from now
+
+Name            Id RSS_MB Committed_MB
+----            -- ------ ------------
+llama-server 24688    220          901
+llama-server 27336   3861         8590
+llama-server 27420      2         8971
+ollama       22132     22           62
+free RAM GB: 2
+
+**********************
+Windows PowerShell transcript end
+End time: 20260930004201
+**********************

@@ -5,11 +5,11 @@ topic: Economics and Strategy
 source_count: 16
 generated_by: gemma4:e4b-it-q4_K_M
 generated: '2026-09-29'
-reviewed: false
+reviewed: true
 ---
 # Microeconomics
 
-Microeconomics is a core module covering the principles of markets, firm behavior, and industry structure, as evidenced by coursework and supervision materials. The owner's work explores key concepts such as supply and demand, market concentration, and the strategic implications of market power, including collusion and price discrimination.
+Microeconomics is a core module covering the principles of markets, firm behavior, and industry structure, as evidenced by coursework and supervision materials. Billy's work explores key concepts such as supply and demand, market concentration, and the strategic implications of market power, including collusion and price discrimination.
 
 ## Key ideas
 - Supply and demand are fundamental to determining prices, and economic models must be tractable while respecting their scope conditions. ([[raw/cambridge/Week 2/MS3 Micro economics/MS3 roadmap.docx|MS3 Micro economics / MS3 roadmap]])
@@ -21,9 +21,8 @@ Microeconomics is a core module covering the principles of markets, firm behavio
 - Digitalization can increase market concentration by allowing big publishers to act as platforms with network effects. ([[raw/cambridge/Week 2/oEcon questions/B - plan.docx|oEcon questions / B - plan]])
 
 ## Related
-- [[Macroeconomics]]: Both subjects deal with economic systems, with Microeconomics focusing on individual markets and Macroeconomics on the broader economy.
-- [[Strategic Management]]: The concepts of building market power through differentiation and strategic positioning are central to both Microeconomics and Strategic Management.
-- [[Negotiation]]: Collusion and cartel formation involve strategic interactions between firms, which relates to negotiation dynamics.
+- [[Strategic Management]]: The MBA economics memo argues for escaping the Bertrand trap through differentiation and barriers to entry; the strategy crib sheet analyses the same industry forces with Porter's 5 Forces.
+- [[Energy Transition]]: The energy memo proposes a platform for buying electricity from competing retail suppliers in Texas, negotiating price and quantity bands: a competition and pricing problem.
 
 ## Sources
 - [[raw/cambridge/Week 2/MS3 Micro economics/Lectures/QandA.docx|MS3 Micro economics / QandA]]

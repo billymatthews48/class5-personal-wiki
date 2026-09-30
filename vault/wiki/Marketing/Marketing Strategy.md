@@ -5,7 +5,7 @@ topic: Marketing
 source_count: 21
 generated_by: gemma4:e4b-it-q4_K_M
 generated: '2026-09-29'
-reviewed: false
+reviewed: true
 ---
 # Marketing Strategy
 
@@ -20,8 +20,7 @@ Billy's coursework in Marketing covered foundational concepts such as the 3 Cs (
 - Tata Group utilizes both 'branded-house' and 'house of brands' approaches across its various verticals. ([[raw/cambridge/First week/MS6 Marketing/Exam/Final draft.docx|MS6 Marketing / Final draft]])
 
 ## Related
-- [[Strategic Management]]: Both subjects involve analyzing the market environment and developing strategic approaches for a firm.
-- [[Brand Management]]: Both discuss the different levels of a product offering, including branding and intangible benefits.
+- [[Brand Management]]: The Tata Group analysis of 'branded house' versus 'house of brands' is the portfolio-level view of the single-brand positioning work in Brand Management.
 
 ## Sources
 - [[raw/cambridge/First week/MS6 Marketing/Exam/1114l_MSE6_ASSIGNMENT.pdf|MS6 Marketing / 1114l_MSE6_ASSIGNMENT]]

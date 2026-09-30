@@ -5,6 +5,7 @@ Every original file in `raw/`, unchanged. `sha256` is the fingerprint of the fil
 | Original | Origin | Passages | Note | sha256 |
 |---|---|---|---|---|
 | [[raw/added/Energy Transition Memo.docx\|Energy Transition Memo.docx]] | added later | 9 | [[Energy Transition]] | `496c0f54b988` |
+| [[raw/added/Netflix Live Sports Strategy.docx\|Netflix Live Sports Strategy.docx]] | added later | 6 | [[Netflix Live Sports Strategy]] | `313ff07c3340` |
 | [[raw/cambridge/Electives/Macroeconomics/Assessment/1114L_MSE9_ESSAY. docx (1).pdf\|1114L_MSE9_ESSAY. docx (1).pdf]] | OneDrive/Cambridge academics/Year 3/Electives/Macroeconomics/Assessment/1114L_MSE9_ESSAY. docx (1).pdf | 39 | [[Macroeconomics]] | `d57903be9447` |
 | [[raw/cambridge/Electives/Macroeconomics/Assessment/Additional readings.docx\|Additional readings.docx]] | OneDrive/Cambridge academics/Year 3/Electives/Macroeconomics/Assessment/Additional readings.docx | 31 | [[Macroeconomics]] | `fe1e45a46545` |
 | [[raw/cambridge/Electives/Macroeconomics/Assessment/Core readings.docx\|Core readings.docx]] | OneDrive/Cambridge academics/Year 3/Electives/Macroeconomics/Assessment/Core readings.docx | 8 | [[Macroeconomics]] | `66eab4def5d8` |
@@ -164,17 +165,17 @@ Every original file in `raw/`, unchanged. `sha256` is the fingerprint of the fil
 | [[raw/cambridge/Week 2/oEcon questions/B - plan.docx\|B - plan.docx]] | OneDrive/Cambridge academics/Year 3/Week 2/oEcon questions/B - plan.docx | 2 | [[Microeconomics]] | `990a72634157` |
 | [[raw/cambridge/Week 2/oEcon questions/B - readings.docx\|B - readings.docx]] | OneDrive/Cambridge academics/Year 3/Week 2/oEcon questions/B - readings.docx | 7 | [[Microeconomics]] | `6f9ee465e942` |
 | [[raw/github/Assignment-1/README.md\|README.md]] | github.com/billymatthews48/Assignment-1@a82dd0f/README.md | 27 | [[Secure Networking Tracker]] | `bc072639668f` |
-| [[raw/github/class4-custom-llm/ASSIGNMENT.md\|ASSIGNMENT.md]] | github.com/billymatthews48/class4-custom-llm@27a6362/ASSIGNMENT.md | 43 | [[Custom LLM Training]] | `7cdced7590d2` |
-| [[raw/github/class4-custom-llm/COURSE_README.md\|COURSE_README.md]] | github.com/billymatthews48/class4-custom-llm@27a6362/COURSE_README.md | 22 | [[Custom LLM Training]] | `61387505d81e` |
-| [[raw/github/class4-custom-llm/EXPERIMENT_LOG.md\|EXPERIMENT_LOG.md]] | github.com/billymatthews48/class4-custom-llm@27a6362/EXPERIMENT_LOG.md | 20 | [[Custom LLM Training]] | `1cc7fea06829` |
-| [[raw/github/class4-custom-llm/README.md\|README.md]] | github.com/billymatthews48/class4-custom-llm@27a6362/README.md | 57 | [[Custom LLM Training]] | `bb79b78709f8` |
-| [[raw/github/class4-custom-llm/STUDENT_README.md\|STUDENT_README.md]] | github.com/billymatthews48/class4-custom-llm@27a6362/STUDENT_README.md | 10 | [[Custom LLM Training]] | `269902686dfa` |
-| [[raw/github/class4-custom-llm/corpus/README.md\|README.md]] | github.com/billymatthews48/class4-custom-llm@27a6362/corpus/README.md | 3 | [[Custom LLM Training]] | `7a1079f4a586` |
-| [[raw/github/class4-custom-llm/evals/README.md\|README.md]] | github.com/billymatthews48/class4-custom-llm@27a6362/evals/README.md | 15 | [[Custom LLM Training]] | `d43de805ab63` |
-| [[raw/github/class4-custom-llm/examples/language-evals/README.md\|README.md]] | github.com/billymatthews48/class4-custom-llm@27a6362/examples/language-evals/README.md | 2 | [[Custom LLM Training]] | `c3cd02020f59` |
-| [[raw/github/class4-custom-llm/legacy/README.md\|README.md]] | github.com/billymatthews48/class4-custom-llm@27a6362/legacy/README.md | 1 | [[Custom LLM Training]] | `32790758ded6` |
-| [[raw/github/class4-custom-llm/legacy/microgpt/README.md\|README.md]] | github.com/billymatthews48/class4-custom-llm@27a6362/legacy/microgpt/README.md | 12 | [[Custom LLM Training]] | `e1e1c3353e7e` |
-| [[raw/github/class4-custom-llm/llm_runs/README.md\|README.md]] | github.com/billymatthews48/class4-custom-llm@27a6362/llm_runs/README.md | 2 | [[Custom LLM Training]] | `7c116797cc71` |
+| [[raw/github/class4-custom-llm/ASSIGNMENT.md\|ASSIGNMENT.md]] | github.com/billymatthews48/class4-custom-llm@27a6362/ASSIGNMENT.md | 43 | [[Custom LLM Training]] | `b9f4504bf014` |
+| [[raw/github/class4-custom-llm/COURSE_README.md\|COURSE_README.md]] | github.com/billymatthews48/class4-custom-llm@27a6362/COURSE_README.md | 22 | [[Custom LLM Training]] | `fa2da652838d` |
+| [[raw/github/class4-custom-llm/EXPERIMENT_LOG.md\|EXPERIMENT_LOG.md]] | github.com/billymatthews48/class4-custom-llm@27a6362/EXPERIMENT_LOG.md | 20 | [[Custom LLM Training]] | `2993abfd835f` |
+| [[raw/github/class4-custom-llm/README.md\|README.md]] | github.com/billymatthews48/class4-custom-llm@27a6362/README.md | 57 | [[Custom LLM Training]] | `308cb9d22082` |
+| [[raw/github/class4-custom-llm/STUDENT_README.md\|STUDENT_README.md]] | github.com/billymatthews48/class4-custom-llm@27a6362/STUDENT_README.md | 10 | [[Custom LLM Training]] | `192bcb9f1c26` |
+| [[raw/github/class4-custom-llm/corpus/README.md\|README.md]] | github.com/billymatthews48/class4-custom-llm@27a6362/corpus/README.md | 3 | [[Custom LLM Training]] | `21d42bda9873` |
+| [[raw/github/class4-custom-llm/evals/README.md\|README.md]] | github.com/billymatthews48/class4-custom-llm@27a6362/evals/README.md | 15 | [[Custom LLM Training]] | `cc21a515c9c7` |
+| [[raw/github/class4-custom-llm/examples/language-evals/README.md\|README.md]] | github.com/billymatthews48/class4-custom-llm@27a6362/examples/language-evals/README.md | 2 | [[Custom LLM Training]] | `49111536b14d` |
+| [[raw/github/class4-custom-llm/legacy/README.md\|README.md]] | github.com/billymatthews48/class4-custom-llm@27a6362/legacy/README.md | 1 | [[Custom LLM Training]] | `65bdb569375b` |
+| [[raw/github/class4-custom-llm/legacy/microgpt/README.md\|README.md]] | github.com/billymatthews48/class4-custom-llm@27a6362/legacy/microgpt/README.md | 12 | [[Custom LLM Training]] | `2ec2ab300069` |
+| [[raw/github/class4-custom-llm/llm_runs/README.md\|README.md]] | github.com/billymatthews48/class4-custom-llm@27a6362/llm_runs/README.md | 2 | [[Custom LLM Training]] | `e554b97c5d7a` |
 | [[raw/github/class4-custom-llm/results/eval_comparison.md\|eval_comparison.md]] | github.com/billymatthews48/class4-custom-llm@27a6362/results/eval_comparison.md | 20 | [[Custom LLM Training]] | `fad02f1b815c` |
 | [[raw/mba/BizComm/BizCom final assignment.docx\|BizCom final assignment.docx]] | OneDrive/MBA academics/BizComm/BizCom final assignment.docx | 6 | [[Business Communication]] | `57e9cca90f98` |
 | [[raw/mba/BizComm/HW1 Billy Matthews.docx\|HW1 Billy Matthews.docx]] | OneDrive/MBA academics/BizComm/HW1 Billy Matthews.docx | 2 | [[Business Communication]] | `7bed1821e149` |

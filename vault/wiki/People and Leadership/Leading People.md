@@ -5,7 +5,7 @@ topic: People and Leadership
 source_count: 2
 generated_by: gemma4:e4b-it-q4_K_M
 generated: '2026-09-29'
-reviewed: false
+reviewed: true
 ---
 # Leading People
 
@@ -21,8 +21,7 @@ In the MBA / Leading people course, Billy engaged in teaching simulations, first
 - The zone of possible agreement (ZOPA) is the overlap between parties' reservation prices, enabling a deal. ([[raw/mba/Leading people teach the AI 2.docx|MBA / Leading people teach the AI 2]])
 
 ## Related
-- [[Organizational Behaviour]]: Both subjects discuss concepts related to how individuals interact within organizational settings, such as inclusion and group dynamics.
-- [[Power and Influence]]: Negotiation directly involves the dynamics of power and influence between parties seeking to distribute scarce resources.
+- [[Negotiation]]: The second teaching session explains reservation price and the zone of possible agreement; the Negotiations elective applies the same bargaining ideas (walk-away price, BATNA) to live exercises.
 
 ## Sources
 - [[raw/mba/Leading people teach the AI 1.docx|MBA / Leading people teach the AI 1]]

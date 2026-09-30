@@ -1,0 +1,86 @@
+{
+  "mode": "ask",
+  "execution": "local",
+  "model": "gemma4:e4b-it-q4_K_M",
+  "embed_model": "embeddinggemma",
+  "runtime": "Ollama at http://localhost:11434",
+  "time": "2026-09-30T00:38:24",
+  "question": "What price gap between the US and Switzerland did I use as a real-world pricing example?",
+  "retrieved": [
+    {
+      "rank": 1,
+      "text": "Expected service – perceived service gap\nGap 5: the sum of these 4 gaps is the difference between expected service and perceived service.\nWhite Bread company example\nIf the system is flawed the workers cant do anything to hit quality standards",
+      "raw_path": "raw/cambridge/First week/MS5 Operations Management/Lectures/Week 4 - Quality Improvement.docx",
+      "locator": "section 'Expected service – perceived service gap'; section 'White Bread company example'",
+      "note_title": "Operations Management",
+      "note_path": "wiki/Operations and Finance/Operations Management.md",
+      "bm25": 14.55,
+      "cosine": 0.334,
+      "score": 0.0304,
+      "method": "hybrid (BM25 + embeddinggemma)"
+    },
+    {
+      "rank": 2,
+      "text": "There are many ways of approaching this. Here is one. Let’s assume there are two groups of consumers: a low WTP group, e.g. students using your LLM to cheat on assignments, and a high WTP group, e.g. consulting firms using it to answer their clients’ questions. First, create a “base” and “premium” LLM. The premium could be more powerful, allow longer messages from the user, and so on. Next, choose the price - likely a subscription fee - for the base LLM that equals the students’ WTP. For the premium LLM, choose the price that makes the consulting firms indifferent between buying the base or premium version. This will induce each group to reveal themselves through self-selection. Note that whether this yields more profit than simple pricing depends on the groups’ WTP relative to marginal cost, so you should use A/B tests to see whether this or simple pricing yields more profit.",
+      "raw_path": "raw/mba/Group 112 Economics Memo.docx",
+      "locator": "opening",
+      "note_title": "Microeconomics",
+      "note_path": "wiki/Economics and Strategy/Microeconomics.md",
+      "bm25": 11.72,
+      "cosine": 0.392,
+      "score": 0.0283,
+      "method": "hybrid (BM25 + embeddinggemma)"
+    },
+    {
+      "rank": 3,
+      "text": "Theoretically, both producer and consumer surplus could rise with scalable price targeting.\nRevenues relative to control pricing increase 65% with optimised uniform pricing, but 81.5% with scalable price targeting. This gives 10% higher profits with scalable price targeting vs optimised uniform pricing\nCustomer surplus declines by less than 1% with price targeting, but 70% of customers pay less than the uniform price.\nGenerally negative views of differential pricing fuelled by big data – CEA (2015) finds differential pricing transfers value from consumers to shareholders, which increases inequality and inefficiency.",
+      "raw_path": "raw/cambridge/First week/MS6 Marketing/Lectures/Week 8 unfinished.docx",
+      "locator": "section 'Scalable price targeting – Dube and Misra (2017)'",
+      "note_title": "Marketing Strategy",
+      "note_path": "wiki/Marketing/Marketing Strategy.md",
+      "bm25": 11.98,
+      "cosine": 0.338,
+      "score": 0.0276,
+      "method": "hybrid (BM25 + embeddinggemma)"
+    },
+    {
+      "rank": 4,
+      "text": "Recent debates highlighted how U.S. patients often pay more for identical medicines than patients abroad. For example, while Americans paid an average price of $2,700 for Humira, the Swiss were able to buy the same drug for $800, and in the United Kingdom, patients got it for $1,300. This disparity has drawn bipartisan criticism, leading to recent policy pushes — including proposals to tie U.S. prices to the lowest prices in peer nations — aimed at narrowing the gap.\nWhy this is third-degree price discrimination:\nHeterogeneity in willingness to pay: U.S. patients and insurers have historically accepted higher prices due to higher incomes and insurance coverage.\nAbility to identify groups: Geography provides a clear and enforceable distinction. U.S. sales are tracked through the FDA and domestic distribution, while foreign sales move through national health systems.",
+      "raw_path": "raw/mba/Example in the Wild 3.docx",
+      "locator": "opening",
+      "note_title": "Microeconomics",
+      "note_path": "wiki/Economics and Strategy/Microeconomics.md",
+      "bm25": 9.56,
+      "cosine": 0.547,
+      "score": 0.025,
+      "method": "hybrid (BM25 + embeddinggemma)"
+    }
+  ],
+  "best_cosine": 0.547,
+  "model_called": true,
+  "stats": {
+    "model": "gemma4:e4b-it-q4_K_M",
+    "wall_s": 36.02,
+    "ttft_s": 32.57,
+    "load_s": 0.01,
+    "prompt_tokens": 976,
+    "prompt_tok_s": 32.2,
+    "gen_tokens": 38,
+    "gen_tok_s": 11.2,
+    "tool_calls": []
+  },
+  "raw_answer": "You used the example where Americans paid an average price of $2,700 for Humira, while Swiss patients could buy the same drug for $800 [4].",
+  "prompt_chars": 4227,
+  "evidence_passages": 4,
+  "status": "answered",
+  "answer": "You used the example where Americans paid an average price of $2,700 for Humira, while Swiss patients could buy the same drug for $800 [4].",
+  "citations": [
+    4
+  ],
+  "invalid_citations": [],
+  "gate": null,
+  "sources": [
+    "[4] raw/mba/Example in the Wild 3.docx (opening) | note: [[Microeconomics]]"
+  ],
+  "saved_to": "C:\\Users\\billy\\Agentic AI\\class5-personal-wiki\\.wiki\\runs\\ask\\20260930-003902-617.md"
+}

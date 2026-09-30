@@ -1,0 +1,81 @@
+{
+  "mode": "ask",
+  "execution": "local",
+  "model": "gemma4:e4b-it-q4_K_M",
+  "embed_model": "embeddinggemma",
+  "runtime": "Ollama at http://localhost:11434",
+  "time": "2026-09-30T00:39:40",
+  "question": "What mark did I receive for my Strategic Management individual essay?",
+  "retrieved": [
+    {
+      "rank": 1,
+      "text": "1114L Management Studies Tripos ELECTIVE MODULE COURSEWORK MSE12 STRATEGIC MANAGEMENT Course Leader: Dr. Kamal Munir Hand-in date: 26 March 2020 12 noon 2206 (Word count limit as advised by course leader) I confirm that this piece of work is my own unaided effort and conforms with the Judge Business School guidelines on Plagiarism (Do NOT sign)",
+      "raw_path": "raw/cambridge/Electives/Strategic management/Supervisions & assessment/Assessment/1114L-MSE12-INDIVIDUAL-ESSAY.pdf",
+      "locator": "page 1",
+      "note_title": "Strategic Management",
+      "note_path": "wiki/Economics and Strategy/Strategic Management.md",
+      "bm25": 9.52,
+      "cosine": 0.465,
+      "score": 0.0309,
+      "method": "hybrid (BM25 + embeddinggemma)"
+    },
+    {
+      "rank": 2,
+      "text": "Management Studies Tripos\nELECTIVE MODULE\nCOURSEWORK\nMSE12\nSTRATEGIC MANAGEMENT\nCourse Leader:  Dr. Kamal Munir\nHand-in date:\n26 March 2020\n12 noon\n(Word count limit as advised by course leader)\n(Do NOT sign)\nIntroduction\nThis report will explain how the hybrid hotel (hybrids) segment of the hospitality industry can navigate the disruption of Covid-19 to emerge in a stronger position than traditional hotel models (hotels) and disrupters like Airbnb.\nHybrids combine value drivers from both hotels and hostels, with a focus on delivering social experiences and using space creatively (Folgado, 2020). They are well-placed to capitalise on shifting consumer attitudes. Additionally, the pandemic has exposed the risk incumbents have taken by providing a one-dimensional offering. Awareness of the need for revenue diversification has become more colloquial, and the hybrid model addresses this need.",
+      "raw_path": "raw/cambridge/Electives/Strategic management/Supervisions & assessment/Assessment/1114L-MSE12-INDIVIDUAL-ESSAY.docx",
+      "locator": "opening",
+      "note_title": "Strategic Management",
+      "note_path": "wiki/Economics and Strategy/Strategic Management.md",
+      "bm25": 7.23,
+      "cosine": 0.422,
+      "score": 0.0267,
+      "method": "hybrid (BM25 + embeddinggemma)"
+    },
+    {
+      "rank": 3,
+      "text": "Reading Notes\nSome managers have failed to distinguish between operational effectiveness and strategy; OE is a necessary but insufficient condition\nOE is performing similar activities better than rivals\nStrategy involves performing different activities, or similar activities in different ways\nOE is insufficient because of the rapid diffusion of best practices and the fact that OE’s productivity gains are often captured by suppliers and consumers (thus no change in profitability)\nAdditionally, competitive convergence occurs as rivals outsource activities to third parties, hence these activities become more generic (Porter)\nCompetitive strategy rests on unique activities i.e. tailoring activities to the needs of a customer segment to achieve a unique and valuable strategic position\nOrigins of strategic positions:\nVariety-based positioning: specialise a subset of a market’s good or service",
+      "raw_path": "raw/cambridge/Electives/Strategic management/Crib sheet.docx",
+      "locator": "section 'Reading Notes'",
+      "note_title": "Strategic Management",
+      "note_path": "wiki/Economics and Strategy/Strategic Management.md",
+      "bm25": 5.15,
+      "cosine": 0.411,
+      "score": 0.0209,
+      "method": "hybrid (BM25 + embeddinggemma)"
+    },
+    {
+      "rank": 4,
+      "text": "Strategic brand management decisions\nBrand management uses the implementation of marketing mix to build, measure and manage brand value (35). Strategic brand management is providing an offering with an identity understood on all levels. Includes a focus on people, both internally and externally.\nStrategic brand management increases corporate success; 80% of companies managed with a strong brand focus had operating profits twice as high as the sector average (36, Booz Allen Hamilton).\nImportant to have a brand vision that offers a clear and consistent message about the value of the brand. Brand equity is the value of the brand to the company. Brand equity increases if the right marketing processes are put in place.\nThese must communicate clear value propositions from the consumer perspective. Marketers must provide a clear direction for employees toward brand value:",
+      "raw_path": "raw/cambridge/First week/MS6 Marketing/Lectures/Week 4 - Product.docx",
+      "locator": "section 'Strategic brand management decisions'",
+      "note_title": "Marketing Strategy",
+      "note_path": "wiki/Marketing/Marketing Strategy.md",
+      "bm25": 11.0,
+      "cosine": 0.356,
+      "score": 0.0208,
+      "method": "hybrid (BM25 + embeddinggemma)"
+    }
+  ],
+  "best_cosine": 0.465,
+  "model_called": true,
+  "stats": {
+    "model": "gemma4:e4b-it-q4_K_M",
+    "wall_s": 36.59,
+    "ttft_s": 34.69,
+    "load_s": 0.01,
+    "prompt_tokens": 1042,
+    "prompt_tok_s": 32.1,
+    "gen_tokens": 25,
+    "gen_tok_s": 13.4,
+    "tool_calls": []
+  },
+  "raw_answer": "INSUFFICIENT_EVIDENCE: The evidence does not contain the mark you received for your Strategic Management individual essay.",
+  "prompt_chars": 4644,
+  "evidence_passages": 4,
+  "status": "insufficient_evidence",
+  "gate": "model",
+  "answer": "Insufficient evidence: The evidence does not contain the mark you received for your Strategic Management individual essay.",
+  "citations": [],
+  "sources": [],
+  "saved_to": "C:\\Users\\billy\\Agentic AI\\class5-personal-wiki\\.wiki\\runs\\ask\\20260930-004018-960.md"
+}
