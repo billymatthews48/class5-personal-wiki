@@ -5,7 +5,7 @@ topic: Operations and Finance
 source_count: 26
 generated_by: gemma4:e4b-it-q4_K_M
 generated: '2026-09-30'
-reviewed: false
+reviewed: true
 ---
 # Operations Management
 
@@ -20,9 +20,9 @@ Billy's coursework in Operations Management covered core concepts such as qualit
 - Statistical quality control, aided by control charts, allowed differentiation between statistical and assignable process variation. ([[raw/cambridge/First week/MS5 Operations Management/Process theory textbook notes.docx|MS5 Operations Management / Process theory textbook notes]])
 
 ## Related
-- [[Strategic Management]]: Both subjects involve analyzing trade-offs between competing priorities using models like the Sandcone model.
-- [[Marketing Strategy]]: Both discuss how customer expectations influence the definition and delivery of quality.
-- [[Business Communication]]: Both touch upon the importance of customer perception in defining service quality.
+- [[Strategic Management]]: Order winners, qualifiers and losers (Week 2) are reused in the strategy supervision on how guests choose hotels.
+- [[Marketing Strategy]]: The supply-chain lecture claims customer experience is determined by the supply chain rather than the 4 Ps taught in marketing.
+- [[Management Studies Revision]]: The MS5 column of the revision table lists the same lecture sequence: Zara, process design, quality, six sigma, lean.
 
 ## Sources
 - [[raw/cambridge/First week/MS5 Operations Management/Exam/1114l_MS5_ASSIGNMENTS.pdf|MS5 Operations Management / 1114l_MS5_ASSIGNMENTS]]

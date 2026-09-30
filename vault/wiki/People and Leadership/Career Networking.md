@@ -5,9 +5,9 @@ topic: People and Leadership
 source_count: 1
 generated_by: gemma4:e4b-it-q4_K_M
 generated: '2026-09-30'
-reviewed: false
+reviewed: true
 ---
-# Career Networking and Visibility
+# Career Networking
 
 Billy explored the components of professional success, identifying performance, image, and exposure as critical factors, with exposure being the most weighted. The coursework detailed various network structures, such as expansionists and brokers, and provided practical strategies for building and leveraging professional relationships.
 
@@ -20,9 +20,8 @@ Billy explored the components of professional success, identifying performance, 
 - Senior management decisions are driven by evidence-based rationale alongside softer influence techniques. ([[raw/cambridge/Electives/Personal development/Session 1.docx|Personal development / Session 1]])
 
 ## Related
-- [[Power and Influence]]: Both subjects detail the principles and science behind how individuals can exert influence over others.
-- [[Business Communication]]: The concepts of image and exposure are directly related to how effectively one communicates professionally.
-- [[Organizational Behaviour]]: The discussion on network types and relationship building aligns with theories in organizational behavior.
+- [[Power and Influence]]: The principles of influence listed here start with liking; the Power and Influence assignment is a plan to improve likeability.
+- [[Secure Networking Tracker]]: The notes give advice on building a network; the tracker app is a tool for keeping track of those contacts.
 
 ## Sources
 - [[raw/cambridge/Electives/Personal development/Session 1.docx|Personal development / Session 1]]

@@ -5,7 +5,7 @@ topic: Study Guides
 source_count: 2
 generated_by: gemma4:e4b-it-q4_K_M
 generated: '2026-09-30'
-reviewed: false
+reviewed: true
 ---
 # Management Studies Revision
 
@@ -16,13 +16,16 @@ Billy's Management Studies revision covered a broad range of topics, including o
 - Collusion in oligopolies can occur when there are few firms and strong enforcement rules, leading to X-inefficiency. ([[raw/cambridge/Week 2/Summary of all questions/Answer summaries.docx|Summary of all questions / Answer summaries]])
 - The revision included topics like hypothesis testing, parameter estimation, and decision analysis. ([[raw/cambridge/Michaelmas revision table.docx|Cambridge / Michaelmas revision table]])
 - Operational concepts covered included quality management, Lean process improvement, and service excellence case studies. ([[raw/cambridge/Michaelmas revision table.docx|Cambridge / Michaelmas revision table]])
-- The impact of collusion on society includes the loss of agglomeration economies from labour poaching. ([[raw/cambridge/Week 2/Summary of all questions/Answer summaries.docx|Summary of all questions / Answer summaries]])
+- For the no-poaching collusion question, the noted consequences include X-inefficiency for the firms and the loss of the agglomeration economies that 'poaching' brings. ([[raw/cambridge/Week 2/Summary of all questions/Answer summaries.docx|Summary of all questions / Answer summaries]])
 - The syllabus included modules on marketing, covering concepts like Customer Lifetime Value (CLV) and segmentation. ([[raw/cambridge/Michaelmas revision table.docx|Cambridge / Michaelmas revision table]])
 
 ## Related
-- [[Organizational Behaviour]]: Both notes cover motivation theories and employee incentives.
-- [[Microeconomics]]: Both notes discuss market structures such as oligopolies and welfare consequences.
-- [[Operations Management]]: Both notes address process improvement methodologies like Lean and Six Sigma.
+- [[Organizational Behaviour]]: MS1: the answer summaries cover the motivation question (motivation theories, expectancy theory).
+- [[Quantitative Methods]]: MS2: the revision table lists hypothesis testing, decision analysis, Monte Carlo simulation and regression.
+- [[Microeconomics]]: MS3: the answer summaries cover the collusion question (what makes collusion possible, welfare consequences).
+- [[Finance and Accounting]]: MS4: the revision table lists cash flows, present values and stock valuation.
+- [[Operations Management]]: MS5: the revision table lists Zara, process design, quality management, six sigma and lean.
+- [[Marketing Strategy]]: MS6: the revision table lists CLV, segmentation, product and price.
 
 ## Sources
 - [[raw/cambridge/Michaelmas revision table.docx|Cambridge / Michaelmas revision table]]

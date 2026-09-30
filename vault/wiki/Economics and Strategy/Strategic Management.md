@@ -22,7 +22,9 @@ This collection of notes covers the core concepts of Strategic Management, rangi
 ## Related
 - [[Macroeconomics]]: The individual essay on hybrid hotels is set in the Covid-19 disruption that the macroeconomics essay explains as a global recession.
 - [[Microeconomics]]: Porter's 5 Forces in the crib sheet (barriers to entry, rivalry) covers the same industry-structure ideas as the microeconomics work on market power and concentration.
+- [[Operations Management]]: Supervision 1 asks what guests' order winners, qualifiers and losers are when choosing a hotel; that framework is taught in Operations Management (Week 2).
 - [[Technology Adoption Curves]]: Week 5 (disruption strategy) and the technology essay both deal with how strategy must change as a technology matures.
+- [[Netflix Live Sports Strategy]]: The Netflix project applies strategy analysis (positioning, competitive advantage) to one company's choice about live sports.
 
 ## Sources
 - [[raw/cambridge/Electives/Strategic management/Crib sheet.docx|Strategic management / Crib sheet]]

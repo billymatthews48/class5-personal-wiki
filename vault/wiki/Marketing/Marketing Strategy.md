@@ -21,6 +21,8 @@ Billy's coursework in Marketing covered foundational concepts such as the 3 Cs (
 
 ## Related
 - [[Brand Management]]: The Tata Group analysis of 'branded house' versus 'house of brands' is the portfolio-level view of the single-brand positioning work in Brand Management.
+- [[Finance and Accounting]]: Customer Lifetime Value is defined in Week 2 as the NPV of a customer's cash flows, the same present-value method used for project appraisal in finance.
+- [[Operations Management]]: The 4 Ps are the marketing view of the offering; the supply-chain lecture argues customer experience is determined by the supply chain, not the 4 Ps.
 
 ## Sources
 - [[raw/cambridge/First week/MS6 Marketing/Exam/1114l_MSE6_ASSIGNMENT.pdf|MS6 Marketing / 1114l_MSE6_ASSIGNMENT]]

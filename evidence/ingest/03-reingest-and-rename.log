@@ -1,0 +1,40 @@
+﻿### 1. Notes before: 21
+### 2. Re-ingest everything (sources unchanged): expect 0 notes written
+indexed 5119 passages from 196 raw files
+embedding 0 new passages (5119 cached)
+ingest finished in 1.5s: 0 notes written, 21 unchanged, 5119 passages indexed
+### 3. Notes after re-ingest: 21
+### 4. Rename a note: 'Career Networking and Visibility' -> 'Career Networking'
+renamed -> wiki\People and Leadership\Career Networking.md; links updated in: Power and Influence.md, Secure Networking Tracker.md, index.md, Source Catalog.md
+run `wiki ingest` to refresh embeddings, then rerun the question tests.
+### 5. Lint after rename (names, headings, links, source references)
+lint: no problems found
+### 6. Incoming links now point at the new name:
+Power and Influence.md: - [[Career Networking]]: The second assignment is about improving likeability; 'liking' is
+Secure Networking Tracker.md: - [[Career Networking]]: The app tracks networking contacts; the personal development note
+index.md: - [[Career Networking]]: Billy explored the components of professional success, identifyin
+### 7. Re-ingest after the rename: expect 0 written, no duplicate, old name not restored
+indexed 5119 passages from 196 raw files
+embedding 3 new passages (5116 cached)
+  embedded 3/3
+ingest finished in 7.5s: 0 notes written, 21 unchanged, 5119 passages indexed
+### 8. Notes after: 21; files matching 'Career*': Career Networking.md
+### 9. Retrieval check after cleanup (paths and note names in citations)
+# Retrieval check (no generation)
+
+time 2026-09-30T00:51:55 | internet: reachable | embed model embeddinggemma
+
+| Test | Method | Expected source rank(s) in top 5 |
+|---|---|---|
+| T1 | keyword (BM25) | [2] |
+| T1 | hybrid (BM25 + embeddinggemma) | [1] |
+| T2 | keyword (BM25) | MISSING |
+| T2 | hybrid (BM25 + embeddinggemma) | [4] |
+| T3 | keyword (BM25) | [3, 4] |
+| T3 | hybrid (BM25 + embeddinggemma) | [2, 4] |
+| T4 | keyword (BM25) | n/a (unsupported question) |
+| T4 | hybrid (BM25 + embeddinggemma) | n/a (unsupported question) |
+### 10. Search result now cites the renamed note
+search | hybrid (BM25 + embeddinggemma) | no answer generated
+
+[1] raw/cambridge/Electives/Personal development/Session 1.docx  (section 'Personal development')

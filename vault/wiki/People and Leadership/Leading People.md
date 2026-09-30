@@ -22,6 +22,7 @@ In the MBA / Leading people course, Billy engaged in teaching simulations, first
 
 ## Related
 - [[Negotiation]]: The second teaching session explains reservation price and the zone of possible agreement; the Negotiations elective applies the same bargaining ideas (walk-away price, BATNA) to live exercises.
+- [[Business Communication]]: The first teaching session explains diversity, equity and inclusion; the Business Communication assignments analyse DEI in practice (Rivkin's hiring steps, whether DEI is zero-sum).
 
 ## Sources
 - [[raw/mba/Leading people teach the AI 1.docx|MBA / Leading people teach the AI 1]]

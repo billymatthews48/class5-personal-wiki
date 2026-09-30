@@ -24,7 +24,7 @@ Notes on my Cambridge Management Studies degree, Berkeley MBA coursework, and Gi
 ## People and Leadership
 
 - [[Business Communication]]: Billy's coursework in Business Communication explored complex themes such as the tension between individual action and structural change, and the necessity of intellectual honesty when discussing issues like equity.
-- [[Career Networking and Visibility]]: Billy explored the components of professional success, identifying performance, image, and exposure as critical factors, with exposure being the most weighted.
+- [[Career Networking]]: Billy explored the components of professional success, identifying performance, image, and exposure as critical factors, with exposure being the most weighted.
 - [[Leading People]]: In the MBA / Leading people course, Billy engaged in teaching simulations, first covering Diversity, Equity, and Inclusion (DEI) and later focusing on negotiations.
 - [[Negotiation]]: Billy's coursework for the Negotiations elective module involved reflecting on three negotiation exercises: Salt Harbour, MedLee, and Harborco.
 - [[Organizational Behaviour]]: Billy's coursework in Organizational Behaviour covered several core areas, including the definition and characteristics of organizational culture, various theories of motivation, and the dynamics of groups and leadership.

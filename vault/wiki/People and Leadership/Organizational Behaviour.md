@@ -21,6 +21,8 @@ Billy's coursework in Organizational Behaviour covered several core areas, inclu
 
 ## Related
 - [[Power and Influence]]: Week 8 defines leadership as intentionally influencing others; the Power and Influence essays analyse how that influence is built (credibility, likeability).
+- [[Mott MacDonald Consulting Project]]: Week 3 defines organisational culture; the Mott interviews describe a concrete one (open, close-knit, not hierarchical).
+- [[Management Studies Revision]]: The revision summaries cover the motivation essay question (motivation theories, expectancy theory) from the MS1 course.
 
 ## Sources
 - [[raw/cambridge/Paper 1/MS1 Organizational Behaviour/Lectures/OB revision.docx|MS1 Organizational Behaviour / OB revision]]

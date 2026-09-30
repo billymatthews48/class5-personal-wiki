@@ -5,7 +5,7 @@ topic: People and Leadership
 source_count: 3
 generated_by: gemma4:e4b-it-q4_K_M
 generated: '2026-09-30'
-reviewed: false
+reviewed: true
 ---
 # Business Communication
 
@@ -20,9 +20,7 @@ Billy's coursework in Business Communication explored complex themes such as the
 - Inclusive leaders should normalize differences by setting norms that encourage sharing personal experiences to avoid false assumptions. ([[raw/mba/BizComm/HW1 Billy Matthews.docx|BizComm / HW1 Billy Matthews]])
 
 ## Related
-- [[Organizational Behaviour]]: Both notes discuss the impact of inclusive practices and cultural dynamics within professional or academic settings.
-- [[Leading People]]: Both notes examine leadership actions, such as Rivkin's approach, in relation to fostering diverse environments.
-- [[Power and Influence]]: Both notes touch upon the dynamics of influence, such as the difficulty of embedding cultural change beyond a leader's department.
+- [[Leading People]]: Both deal with diversity, equity and inclusion: the assignments here analyse Rivkin's steps to increase diversity, and Leading People has Billy teaching the DEI definitions.
 
 ## Sources
 - [[raw/mba/BizComm/BizCom final assignment.docx|BizComm / BizCom final assignment]]

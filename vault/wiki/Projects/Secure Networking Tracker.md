@@ -5,7 +5,7 @@ topic: Projects
 source_count: 1
 generated_by: gemma4:e4b-it-q4_K_M
 generated: '2026-09-30'
-reviewed: false
+reviewed: true
 ---
 # Secure Networking Tracker
 
@@ -19,7 +19,8 @@ Billy developed the Secure Networking Tracker, a private, per-user contact list 
 - The design guarantees that two separate user accounts can be viewed side-by-side, each showing only its own contacts. ([[raw/github/Assignment-1/README.md|Assignment-1 / README]])
 
 ## Related
-- [[Career Networking and Visibility]]: Both subjects relate to maintaining and managing professional connections.
+- [[Career Networking]]: The app tracks networking contacts; the personal development notes explain why and how to build that network.
+- [[Custom LLM Training]]: Both are Billy's GitHub software projects, documented through their READMEs.
 
 ## Sources
 - [[raw/github/Assignment-1/README.md|Assignment-1 / README]]

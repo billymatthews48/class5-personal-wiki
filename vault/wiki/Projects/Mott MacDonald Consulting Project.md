@@ -5,14 +5,14 @@ topic: Projects
 source_count: 12
 generated_by: gemma4:e4b-it-q4_K_M
 generated: '2026-09-30'
-reviewed: false
+reviewed: true
 ---
 # Mott MacDonald Consulting Project
 
 Billy's coursework involved a consulting project for Mott MacDonald, focusing on defining the 'Office of the Future.' The project utilized qualitative research methods, such as focus groups and interviews, to understand employee needs regarding working arrangements and organizational culture. The output included project initiation documents and discussion drafts synthesizing stakeholder feedback.
 
 ## Key ideas
-- The project aimed to determine what the future multi-disciplinary consultancy office should look like. ([[raw/cambridge/Mott Project/Mott's old project ppt.pptx|Mott Project / Mott's old project ppt]])
+- The project, titled 'Office of the future', set out to understand what future offices need to look like for the company to stay successful. An earlier 2018 group project on the same question is also in the sources. ([[raw/cambridge/Electives/Project/PID.docx|Project / PID]])
 - Focus groups were held to gauge employees' feelings and desires regarding working arrangements post-lockdown. ([[raw/cambridge/Mott Project/Discussion draft.docx|Mott Project / Discussion draft]])
 - The project sought to answer if working arrangements optimize employee wellbeing and productivity to create a competitive advantage. ([[raw/cambridge/Mott Project/Notes on framework.docx|Mott Project / Notes on framework]])
 - Employee feedback revealed conflicting views on working from home, balancing benefits like avoiding commutes against missing face-to-face contact. ([[raw/cambridge/Mott Project/Focus Group Transcripts.docx|Mott Project / Focus Group Transcripts]])
@@ -20,9 +20,8 @@ Billy's coursework involved a consulting project for Mott MacDonald, focusing on
 - The project framework considered task type and workforce composition when determining potential for remote work. ([[raw/cambridge/Mott Project/Notes on framework.docx|Mott Project / Notes on framework]])
 
 ## Related
-- [[Organizational Behaviour]]: Both subjects examine employee attitudes and the impact of working arrangements on the workforce.
-- [[Operations Management]]: Both involve defining the optimal structure and function of a workplace environment.
-- [[Strategic Management]]: Both explore how organizational structures can create a competitive advantage.
+- [[Organizational Behaviour]]: The interviews describe Mott MacDonald's culture (open, close-knit, not hierarchical), an example of the organisational culture concept from OB Week 3.
+- [[Strategic Management]]: Both look at working life after Covid-19: this project asks what the office should become, and the strategy essay notes remote working's effect on young professionals.
 
 ## Sources
 - [[raw/cambridge/Electives/Project/PID.docx|Project / PID]]

@@ -5,7 +5,7 @@ topic: Operations and Finance
 source_count: 11
 generated_by: gemma4:e4b-it-q4_K_M
 generated: '2026-09-30'
-reviewed: false
+reviewed: true
 ---
 # Quantitative Methods
 
@@ -20,9 +20,8 @@ Billy's coursework in Quantitative Methods covered fundamental statistical conce
 - Supervised learning in machine learning requires input data that has observations with known labels. ([[raw/cambridge/Exams/MS2 Quantitative Methods/Lectures/Machine learning.docx|MS2 Quantitative Methods / Machine learning]])
 
 ## Related
-- [[Operations Management]]: Both fields involve using quantitative methods to model and improve processes.
-- [[Finance and Accounting]]: Both fields utilize regression and statistical tools for financial prediction and analysis.
-- [[Strategic Management]]: Both fields employ modelling techniques like driver trees to analyze business outcomes.
+- [[Custom LLM Training]]: The machine learning lecture introduces supervised learning from labelled data; the nanoGPT project trains and evaluates an actual language model.
+- [[Management Studies Revision]]: The MS2 column of the revision table lists parameter estimation, hypothesis testing, decision analysis, Monte Carlo simulation and regression.
 
 ## Sources
 - [[raw/cambridge/Exams/1114l.docx|Cambridge / 1114l]]

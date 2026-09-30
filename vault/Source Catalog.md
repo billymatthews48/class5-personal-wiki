@@ -29,7 +29,7 @@ Every original file in `raw/`, unchanged. `sha256` is the fingerprint of the fil
 | [[raw/cambridge/Electives/Negotiations/Session 1.docx\|Session 1.docx]] | OneDrive/Cambridge academics/Year 3/Electives/Negotiations/Session 1.docx | 9 | [[Negotiation]] | `56b2962c25e6` |
 | [[raw/cambridge/Electives/Negotiations/Session 2.docx\|Session 2.docx]] | OneDrive/Cambridge academics/Year 3/Electives/Negotiations/Session 2.docx | 11 | [[Negotiation]] | `7731f347e2bf` |
 | [[raw/cambridge/Electives/Negotiations/Session 3.docx\|Session 3.docx]] | OneDrive/Cambridge academics/Year 3/Electives/Negotiations/Session 3.docx | 6 | [[Negotiation]] | `d6c5371aa07f` |
-| [[raw/cambridge/Electives/Personal development/Session 1.docx\|Session 1.docx]] | OneDrive/Cambridge academics/Year 3/Electives/Personal development/Session 1.docx | 3 | [[Career Networking and Visibility]] | `5994d05bb9dc` |
+| [[raw/cambridge/Electives/Personal development/Session 1.docx\|Session 1.docx]] | OneDrive/Cambridge academics/Year 3/Electives/Personal development/Session 1.docx | 3 | [[Career Networking]] | `5994d05bb9dc` |
 | [[raw/cambridge/Electives/Project/PID.docx\|PID.docx]] | OneDrive/Cambridge academics/Year 3/Electives/Project/PID.docx | 13 | [[Mott MacDonald Consulting Project]] | `e21ca756004d` |
 | [[raw/cambridge/Electives/Project/Project management.docx\|Project management.docx]] | OneDrive/Cambridge academics/Year 3/Electives/Project/Project management.docx | 4 | [[Mott MacDonald Consulting Project]] | `aead0d1278e5` |
 | [[raw/cambridge/Electives/Strategic management/Crib sheet.docx\|Crib sheet.docx]] | OneDrive/Cambridge academics/Year 3/Electives/Strategic management/Crib sheet.docx | 13 | [[Strategic Management]] | `f7e94396dd4d` |

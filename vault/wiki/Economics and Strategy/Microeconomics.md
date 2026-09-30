@@ -23,6 +23,7 @@ Microeconomics is a core module covering the principles of markets, firm behavio
 ## Related
 - [[Strategic Management]]: The MBA economics memo argues for escaping the Bertrand trap through differentiation and barriers to entry; the strategy crib sheet analyses the same industry forces with Porter's 5 Forces.
 - [[Energy Transition]]: The energy memo proposes a platform for buying electricity from competing retail suppliers in Texas, negotiating price and quantity bands: a competition and pricing problem.
+- [[Management Studies Revision]]: The revision answer summaries cover the collusion essay question (what makes collusion possible, welfare consequences) answered in full in the MS3 essays.
 
 ## Sources
 - [[raw/cambridge/Week 2/MS3 Micro economics/Lectures/QandA.docx|MS3 Micro economics / QandA]]

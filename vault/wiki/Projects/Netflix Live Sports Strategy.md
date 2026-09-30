@@ -5,7 +5,7 @@ topic: Projects
 source_count: 1
 generated_by: gemma4:e4b-it-q4_K_M
 generated: '2026-09-30'
-reviewed: false
+reviewed: true
 ---
 # Netflix Live Sports Strategy
 
@@ -19,8 +19,7 @@ Billy's final project involved a strategic analysis of Netflix's entry into live
 - The analysis will weigh aggressive bidding for major league rights against avoiding the financial volatility of sports broadcasting. ([[raw/added/Netflix Live Sports Strategy.docx|Added / Netflix Live Sports Strategy]])
 
 ## Related
-- [[Strategic Management]]: Both subjects involve analyzing a company's strategic choices regarding market positioning and growth.
-- [[Marketing Strategy]]: Both subjects discuss how a company can deepen engagement and diversify revenue through content offerings.
+- [[Strategic Management]]: A strategy project: it weighs a deep commitment to live sports against Netflix's existing positioning and long-term competitive advantage.
 
 ## Sources
 - [[raw/added/Netflix Live Sports Strategy.docx|Added / Netflix Live Sports Strategy]]

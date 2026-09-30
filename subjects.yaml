@@ -82,7 +82,7 @@ subjects:
     sources: [raw/mba/BizComm/**]
 
   - key: personal-development
-    title: Career Networking and Visibility
+    title: Career Networking
     folder: People and Leadership
     sources: [raw/cambridge/Electives/Personal development/**]
 

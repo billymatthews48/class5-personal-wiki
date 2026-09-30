@@ -21,6 +21,7 @@ Billy's coursework on Power and Influence, presented in an MBA essay, analyzes t
 ## Related
 - [[Negotiation]]: BATNAs as a source of power in the negotiation journal connect to the essay's analysis of formal and informal power.
 - [[Organizational Behaviour]]: The essay's informal power sources (expertise, social capital) relate to the OB notes' definition of leadership as influencing others.
+- [[Career Networking]]: The second assignment is about improving likeability; 'liking' is the first principle of influence in the personal development notes.
 - [[Technology Adoption Curves]]: Both essays are framed around Billy's post-MBA consulting role at Bain.
 
 ## Sources

@@ -5,7 +5,7 @@ topic: Operations and Finance
 source_count: 14
 generated_by: gemma4:e4b-it-q4_K_M
 generated: '2026-09-30'
-reviewed: false
+reviewed: true
 ---
 # Finance and Accounting
 
@@ -20,8 +20,8 @@ Billy's coursework in Finance and Accounting covered the fundamental processes o
 - Retained earnings decrease when a company pays dividends to its shareholders. ([[raw/cambridge/Exams/1114l_M3_Assessment.docx|Cambridge / 1114l_M3_Assessment]])
 
 ## Related
-- [[Quantitative Methods]]: Both subjects involve the use of financial models and calculations, such as NPV and stock valuation.
-- [[Strategic Management]]: The analysis of financial information is used to aid economic decision-making, which is central to strategic management.
+- [[Marketing Strategy]]: NPV from project appraisal is the method behind Customer Lifetime Value, defined in the marketing notes as the NPV of a customer's cash flows.
+- [[Management Studies Revision]]: The MS4 column of the revision table lists cash flows, present values and stock valuation.
 
 ## Sources
 - [[raw/cambridge/Exams/1114l_M3_Assessment.docx|Cambridge / 1114l_M3_Assessment]]
