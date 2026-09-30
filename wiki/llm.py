@@ -137,19 +137,25 @@ class GeminiGemmaClient:
                 contents.append({"role": role, "parts": [{"text": text}]})
         if system and contents:
             contents[0]["parts"][0]["text"] = f"{system}\n\n---\n\n{contents[0]['parts'][0]['text']}"
-        gen = {"temperature": temperature}
-        if max_tokens:
-            gen["maxOutputTokens"] = max_tokens
+        # Hosted Gemma 4 thinks before answering and its thinking tokens count against
+        # maxOutputTokens, so the local caps (e.g. 400) leave no room for the answer. Use a
+        # generous fixed limit; the thinking parts are dropped below and never shown.
+        gen = {"temperature": temperature, "maxOutputTokens": 4096}
         if fmt is not None:
             gen["responseMimeType"] = "application/json"
         start = time.perf_counter()
-        try:
-            r = requests.post(self.ENDPOINT.format(model=self.model), timeout=180,
-                              headers={"x-goog-api-key": self.api_key},
-                              json={"contents": contents, "generationConfig": gen})
-        except requests.RequestException as e:
-            raise LLMError(f"Online mode could not reach the Gemini API ({e.__class__.__name__}). "
-                           f"No fallback is attempted; use local mode.")
+        r = None
+        for attempt in range(5):       # retries: the API returned sporadic 500s in testing
+            try:
+                r = requests.post(self.ENDPOINT.format(model=self.model), timeout=180,
+                                  headers={"x-goog-api-key": self.api_key},
+                                  json={"contents": contents, "generationConfig": gen})
+            except requests.RequestException as e:
+                raise LLMError(f"Online mode could not reach the Gemini API ({e.__class__.__name__}). "
+                               f"No fallback is attempted; use local mode.")
+            if r.status_code < 500:
+                break
+            time.sleep(3 * (attempt + 1))
         if r.status_code >= 400:
             raise LLMError(f"Gemini API error {r.status_code}: {r.text[:300]}")
         data = r.json()

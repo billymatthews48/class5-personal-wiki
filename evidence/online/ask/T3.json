@@ -1,0 +1,90 @@
+{
+  "mode": "ask",
+  "execution": "online",
+  "model": "gemma-4-26b-a4b-it",
+  "embed_model": "embeddinggemma",
+  "runtime": "Gemini API (hosted Gemma)",
+  "time": "2026-09-30T01:33:21",
+  "question": "Who was the client for my Cambridge consulting project, and how did we plan to gather primary data?",
+  "retrieved": [
+    {
+      "rank": 1,
+      "text": "lleague visibility, believing that the principle of “out of sight, out of mind” applies for colleagues based on different floors in the same building. That said, the same participants recognised the financial impracticalities of having a layout of one large office floor, as opposed to multiple smaller floors. Additionally, several participants from the Cambridge office stated that the open plan design created a level of noise too great to allow them to focus effectively. As such, a key challenge for our client is balancing the benefits of an open plan layout which creates colleague visibility and accessibility against financial constraints and",
+      "raw_path": "raw/cambridge/Mott Project/Discussion draft.docx",
+      "locator": "opening",
+      "note_title": "Mott MacDonald Consulting Project",
+      "note_path": "wiki/Projects/Mott MacDonald Consulting Project.md",
+      "bm25": 17.68,
+      "cosine": 0.429,
+      "score": 0.0303,
+      "method": "hybrid (BM25 + embeddinggemma)"
+    },
+    {
+      "rank": 2,
+      "text": "Our client has specified that they are not seeking suggestions on actual configurations of furniture and resources, i.e., floor plans. Rather, they are looking for the benefits and disbenefits of a range of possibilities, and general recommendations supported by theory and data.\nFurther, the analysis is based on local conditions and dynamics, and is not to be extrapolated to speculate on the firm’s overseas offices. This is because due to operational and cultural heterogeneity, the conclusions we gather in our focus groups may not hold for overseas employees.\nInterfaces (how the project fits into overall organisation management - and relationships with partners)\nThis project has wider implications for the overall organization management because many of the ingredients used to formulate an office for the future will be shared across business units.",
+      "raw_path": "raw/cambridge/Electives/Project/PID.docx",
+      "locator": "section 'Address:'",
+      "note_title": "Mott MacDonald Consulting Project",
+      "note_path": "wiki/Projects/Mott MacDonald Consulting Project.md",
+      "bm25": 19.31,
+      "cosine": 0.397,
+      "score": 0.0292,
+      "method": "hybrid (BM25 + embeddinggemma)"
+    },
+    {
+      "rank": 3,
+      "text": "Can use surveys as well\nWhy have we selected each group?\nDemographic data\nONS statistics\nShift times around employees\n5-6 people in sessions\nDesign questions based on the data / output we are trying to get out of the session\nExplain purpose of focus group at the start to stop people diverging from that\nSet out ground rules\nUmang is a man\nPart time ones on Tues/Weds\nProject intro for the focus group invite\nJosh is resource manager at division\nFocus shifting to all of W&E not just Cambridge\nJBS\nEnsure compliance with GDPR – Judge normally uses qualitrics\nPerhaps use focus group data to inform application of academic theories\nPerhaps propose own framework – Porter’s 5 forces model of what determines best working arrangements\nMotivational theories\nBehavioural aspects – nudging and information sharing based on building design",
+      "raw_path": "raw/cambridge/Mott Project/Notes from first few meetings.docx",
+      "locator": "opening",
+      "note_title": "Mott MacDonald Consulting Project",
+      "note_path": "wiki/Projects/Mott MacDonald Consulting Project.md",
+      "bm25": 12.62,
+      "cosine": 0.516,
+      "score": 0.0291,
+      "method": "hybrid (BM25 + embeddinggemma)"
+    },
+    {
+      "rank": 4,
+      "text": "Problem being solved: unprecedented circumstances of remote working -> need to address this (e.g. Wang et al. 2021)\nProject definition\nProject goal\nThe objective of our project is to use academic theory and primary data to propose a framework that will help our client answer three key questions:\nWhat can be done to improve the working-from-home experience of Mott MacDonald’s employees?\nWhat can be done to improve the office experience of Mott MacDonald’s employees?\nWhat is the optimum blend of working-from-home and office work for Mott Macdonald in a post-pandemic world?",
+      "raw_path": "raw/cambridge/Mott Project/Intro and project definition .docx",
+      "locator": "opening",
+      "note_title": "Mott MacDonald Consulting Project",
+      "note_path": "wiki/Projects/Mott MacDonald Consulting Project.md",
+      "bm25": 19.57,
+      "cosine": 0.385,
+      "score": 0.0289,
+      "method": "hybrid (BM25 + embeddinggemma)"
+    }
+  ],
+  "best_cosine": 0.516,
+  "model_called": true,
+  "stats": {
+    "model": "gemma-4-26b-a4b-it (online, Gemini API)",
+    "wall_s": 61.37,
+    "ttft_s": 61.37,
+    "load_s": 0,
+    "prompt_tokens": 942,
+    "prompt_tok_s": null,
+    "gen_tokens": 40,
+    "gen_tok_s": null,
+    "tool_calls": []
+  },
+  "raw_answer": "Your client was Mott MacDonald [4]. You planned to gather primary data using focus groups [2, 3] and potentially surveys [3], noting that Judge normally uses Qualtrics [3].",
+  "prompt_chars": 4379,
+  "evidence_passages": 4,
+  "status": "answered",
+  "answer": "Your client was Mott MacDonald [4]. You planned to gather primary data using focus groups [2, 3] and potentially surveys [3], noting that Judge normally uses Qualtrics [3].",
+  "citations": [
+    2,
+    3,
+    4
+  ],
+  "invalid_citations": [],
+  "gate": null,
+  "sources": [
+    "[2] raw/cambridge/Electives/Project/PID.docx (section 'Address:') | note: [[Mott MacDonald Consulting Project]]",
+    "[3] raw/cambridge/Mott Project/Notes from first few meetings.docx (opening) | note: [[Mott MacDonald Consulting Project]]",
+    "[4] raw/cambridge/Mott Project/Intro and project definition .docx (opening) | note: [[Mott MacDonald Consulting Project]]"
+  ],
+  "saved_to": "C:\\Users\\billy\\Agentic AI\\class5-personal-wiki\\.wiki\\runs\\ask\\20260930-013424-631.md"
+}

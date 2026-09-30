@@ -22,17 +22,49 @@ appeared with raw paths and note names, and there were no console errors.
 
 Not tested: the Ask and Chat tabs by hand in the browser (their endpoints were tested above), and concurrent users.
 
-## Online mode (`--mode online`): written, NOT tested end to end
+## Online mode (`--mode online`): ask mode tested, 4 / 4 pass
 
 - **What it is:** `wiki ask … --mode online` and `wiki chat --mode online` send the assembled prompt to hosted
   `gemma-4-26b-a4b-it` on the Gemini API (`generativelanguage.googleapis.com`). This is the 26B A4B model that does not fit
   on this laptop. Retrieval and embeddings stay local.
 - **What it sends to Google:** the instructions, the question, and the retrieved passages (up to 4,000 characters of my
   notes) for ask; the conversation for chat. Nothing else.
-- **How to select it:** set `GEMINI_API_KEY` (from Google AI Studio), then add `--mode online`. Local is the default.
-- **Why it is untested:** no API key was available, so no online answer was ever produced. I have no evidence that the
-  request format, the response parsing or the answer quality are correct.
-- **What was tested:** the failure path. With no key:
+- **How to select it:** set `GEMINI_API_KEY` (from Google AI Studio), then add `--mode online`. Local is the default. The
+  key is read from the environment and is not stored in any file in this repository.
+
+### Result
+
+The four ask tests, run with `python tests/run_tests.py --label online --online`. Evidence is kept apart from the local runs
+in [evidence/online](../online/summary.md), and every card is labelled "Execution: online".
+
+| Test | Result | Answer |
+|---|---|---|
+| T1 | answered, cited [1] | "performance, image, and exposure … 10%, … 30%, … 60%" |
+| T2 | answered, cited [4] | "Americans paid an average of $2,700 while the Swiss paid $800" |
+| T3 | answered, cited [2, 3, 4] | "Your client was Mott MacDonald [4]. … focus groups [2, 3] and potentially surveys [3], noting that Judge normally uses Qualtrics [3]." All citations supported; the only model to cite the PID. |
+| T4 | insufficient evidence | refused correctly |
+
+Wall time was 8–80 s per answer, including retries.
+
+### Two problems found while getting it to work
+
+1. **Empty answers.**
+   - The hosted model thinks before answering, and its thinking tokens count against `maxOutputTokens`.
+   - The harness's 400-token cap for ask left no room for the answer, so the first online attempt returned nothing.
+   - The citation check then correctly refused to show it as a grounded answer.
+   - Fix in `wiki/llm.py`: online calls use a fixed 4,096-token limit, and thinking parts are dropped.
+2. **Sporadic HTTP 500 errors.**
+   - Identical requests alternated between 200 and 500 ("Internal error encountered").
+   - The cause is unknown; it may be free-tier rate limiting.
+   - Fix: up to 5 attempts with increasing waits. If all fail, the command stops with the API error. It never falls back to
+     the local model.
+
+### Not tested
+
+- `wiki chat --mode online`. Hosted Gemma is not given the `search_notes` tool, so online chat would only retrieve through `/notes`.
+- Online mode while offline. It would fail with "could not reach the Gemini API".
+
+### With no key
 
 ```
 > wiki ask "Who was the client for my Cambridge consulting project?" --mode online

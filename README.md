@@ -8,7 +8,8 @@ model that runs on my laptop and works with the internet disconnected.
 - **Wiki:** open [`vault/`](vault) in Obsidian, starting at [`vault/index.md`](vault/index.md). It has 21 subject notes in 6 topic folders.
 - **Obsidian:** [screenshots](#obsidian-screenshots) of an open note, the index and the graph.
 - **Model choice:** [E2B vs E4B comparison](evidence/model-comparison.md). Both pass every test; E2B is faster, E4B cites more carefully.
-- **Not done:** see [What is incomplete](#what-is-incomplete). Online mode has never produced an answer.
+- **Optional online mode:** hosted `gemma-4-26b-a4b-it` passes the same four ask tests ([evidence/online](evidence/online/summary.md)). Local is the default.
+- **Not done:** see [What is incomplete](#what-is-incomplete).
 
 ## 1. Purpose and sources
 
@@ -73,9 +74,16 @@ wiki rename "Old Name" "New Name"
 wiki serve                        # optional local web page at http://127.0.0.1:8765
 ```
 
-Optional, and off unless asked for: `wiki ask "…" --mode online` sends the question and retrieved passages to hosted Gemma on
-the Gemini API. It needs `GEMINI_API_KEY` and is never used as a fallback. It is untested; see
-[What is incomplete](#what-is-incomplete).
+### Optional online mode (separate from the offline instructions above)
+
+- **Select it:** set `GEMINI_API_KEY` (from Google AI Studio), then run `wiki ask "…" --mode online`.
+- **Endpoint:** hosted `gemma-4-26b-a4b-it` on the Gemini API (`generativelanguage.googleapis.com`). This is the 26B A4B
+  model that does not fit on this laptop.
+- **Data sent to Google:** the research instructions, the question, and up to 4 retrieved passages (at most 4,000 characters
+  of my notes). Retrieval and embeddings stay local.
+- **Never a fallback:** it runs only when `--mode online` is given. If the API fails, the command stops with the error.
+- **Evidence:** the four ask tests pass ([evidence/online](evidence/online/summary.md), details in
+  [web-ui-and-online-mode.md](evidence/optional/web-ui-and-online-mode.md)). Online chat was not tested.
 
 ### Why this model
 
@@ -230,8 +238,8 @@ Other evidence:
 - **Model comparison:** [model-comparison.md](evidence/model-comparison.md), with the E2B run in [evidence/e2b](evidence/e2b/summary.md).
 - **Optional extras:**
   - [memory and drafts](evidence/optional/memory-and-drafts.md) (`/remember`, `/draft`): tested; two bugs found and fixed.
-  - [local web page and online mode](evidence/optional/web-ui-and-online-mode.md): the web page is tested; online mode is
-    tested only for its no-key error.
+  - [local web page and online mode](evidence/optional/web-ui-and-online-mode.md): the web page is tested; online mode
+    passes the four ask tests ([evidence/online](evidence/online/summary.md)), labelled separately from the local runs.
 
 ### Obsidian screenshots
 
@@ -293,8 +301,8 @@ Not shown in a screenshot: a click-through from a note to a source file. It can 
 
 ## What is incomplete
 
-- **Online mode has never produced an answer.** `--mode online` (hosted `gemma-4-26b-a4b-it` on the Gemini API) is written,
-  but no API key was available. Only its no-key error path is tested. Local mode is the default and does not depend on it.
+- **Online chat is untested.** Online mode was tested for ask only (4 / 4 pass). Hosted Gemma is not given the `search_notes`
+  tool, so online chat would retrieve only through `/notes`. The API also returned sporadic HTTP 500 errors, which the client retries.
 - **E2B is not the default, and was only tested online.** The comparison shows it is the smallest model that works, but it
   was run once, with the internet connected, and never used to write notes.
 - **The web page's Ask and Chat tabs were not clicked through by hand.** Their endpoints were tested, and the Search tab was

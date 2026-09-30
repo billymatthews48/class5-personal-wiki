@@ -56,10 +56,19 @@ def ask_card(q, rec, env):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--label", default="online-dev", help="evidence subfolder, e.g. offline")
+    ap.add_argument("--online", action="store_true", help="optional: run the four ask tests on hosted Gemma")
     args = ap.parse_args()
     out = EVIDENCE / args.label
     env = environment()
-    client = CountingClient()
+    if args.online:
+        # OPTIONAL online run: hosted Gemma answers, retrieval and embeddings stay local. Kept in
+        # its own evidence folder and labelled, so it cannot be confused with the local runs.
+        from wiki.llm import GeminiGemmaClient
+        client = GeminiGemmaClient()
+        env.update(execution="ONLINE (hosted Gemma on the Gemini API)", model=client.model,
+                   runtime="Gemini API; retrieval and embeddings local (Ollama)")
+    else:
+        client = CountingClient()
     h = Harness(client)
     summary = [f"# Test run: {args.label}", "", "```", *[f"{k}: {v}" for k, v in env.items()], "```", "",
                "| Check | Result | Detail |", "|---|---|---|"]
@@ -73,6 +82,11 @@ def main():
         dump(out / "ask" / f"{q['id']}.json", rec)
         summary.append(f"| ask {q['id']} ({q['type']}) | {'PASS' if passed else 'FAIL'} | "
                        f"status={rec['status']}, cited={rec['citations']} [card](ask/{q['id']}.md) |")
+
+    if args.online:      # the online extension covers ask mode only; mode checks are local tests
+        write(out / "summary.md", "\n".join(summary) + "\n")
+        print("\n".join(summary))
+        return
 
     mc = QUESTIONS["mode_checks"]
     md = [f"# Mode checks ({args.label})", "", f"model {env['model']} | local | internet: {env['internet']}", ""]
