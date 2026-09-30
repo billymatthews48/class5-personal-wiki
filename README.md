@@ -225,6 +225,6 @@ Other evidence:
 - **Re-ingestion and rename evidence:** the code exists (`wiki ingest`, `wiki rename`, `wiki lint`), but I did not record a
   duplicate-free re-ingest run.
 - **E2B comparison, online mode, web UI, memory commands:** E2B was never benchmarked; the other three are written but untested.
-- **Recording:** no usable screen recording of the offline run was captured. The proof is the PowerShell transcript
+- **Recording:** a screen recording of the offline run is still to be added. For now the proof is the PowerShell transcript
   ([evidence/offline/transcript.txt](evidence/offline/transcript.txt)), which records the disconnected adapters, the failed
   connectivity checks, and every command with its output.
