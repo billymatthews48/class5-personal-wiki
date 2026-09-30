@@ -90,8 +90,23 @@ wiki chat
 | Memory: `ollama ps` size for the chat model | 1.9 GB (8192 context, 100% CPU) | smoke tests |
 | Memory: system free RAM | 3.0–3.2 GB before runs; 1.8–1.9 GB during the offline run | transcript |
 
-A fuller memory benchmark (`tests/bench.py`, which samples peak process memory) was written but had not finished at
-submission. If `evidence/bench/` exists, it holds those results.
+Benchmark run ([evidence/bench](evidence/bench/bench-gemma4_e4b-it-q4_K_M.md), online, same model and wiki):
+
+| Step | Wall | Notes |
+|---|---|---|
+| RAG answer, cold | 70.4 s | 22.7 s model load; first token at 62.9 s; 1,085 prompt tokens at 28.6 tok/s; 10.0 tok/s generation |
+| RAG answer, warm (same question) | 9.8 s | prompt cached; first token at 2.5 s |
+| Keyword search | 0.02 s | no model |
+| Hybrid search | 2.2 s | includes embedding the query |
+| Gemma writes one note | 79.5 s | 1,021 prompt tokens, 434 generated at 10.2 tok/s |
+| Re-index all 195 raw files (parse cached) | 0.8 s | |
+
+Memory during the benchmark:
+- `ollama ps` reported 1.76 GB for the chat model and 0.63 GB for the embedding model.
+- System free RAM fell to **0.01 GB during the cold model load** and stayed at 1.3–1.7 GB afterwards. E4B plus everything
+  else open on this laptop uses essentially all 13.3 GB.
+- **Measurement failure:** the "Peak Ollama RSS" column in the benchmark file reads 0.02 GB. The sampler only matched
+  Ollama's small server process, not the runner process that holds the model, so that column is not a valid measure of model memory.
 
 ## 3. Architecture
 

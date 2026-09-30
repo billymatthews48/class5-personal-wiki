@@ -1,0 +1,151 @@
+{
+  "env": {
+    "time": "2026-09-29T23:54:21",
+    "internet": "reachable",
+    "execution": "local",
+    "model": "gemma4:e4b-it-q4_K_M",
+    "embed_model": "embeddinggemma",
+    "runtime": "ollama version is 0.34.4",
+    "num_ctx": 8192,
+    "think": false,
+    "os": "Windows-11-10.0.26200-SP0",
+    "cpu": "AMD64 Family 25 Model 68 Stepping 1, AuthenticAMD",
+    "ram_total_gb": 13.3,
+    "ram_available_gb": 1.8
+  },
+  "rows": [
+    {
+      "step": "RAG answer, cold (model load included)",
+      "wall_s": 70.36,
+      "peak_ollama_rss_gb": 0.02,
+      "peak_python_rss_gb": 0.1,
+      "min_system_available_gb": 0.01,
+      "ollama_ps": [
+        {
+          "name": "gemma4:e4b-it-q4_K_M",
+          "size_gb": 1.76,
+          "size_vram_gb": 0.0
+        },
+        {
+          "name": "embeddinggemma:latest",
+          "size_gb": 0.63,
+          "size_vram_gb": 0.0
+        }
+      ],
+      "load_s": 22.67,
+      "ttft_s": 62.89,
+      "prompt_tokens": 1085,
+      "prompt_tok_s": 28.6,
+      "gen_tokens": 46,
+      "gen_tok_s": 10.0,
+      "status": "answered"
+    },
+    {
+      "step": "RAG answer, warm",
+      "wall_s": 9.82,
+      "peak_ollama_rss_gb": 0.02,
+      "peak_python_rss_gb": 0.06,
+      "min_system_available_gb": 1.58,
+      "ollama_ps": [
+        {
+          "name": "gemma4:e4b-it-q4_K_M",
+          "size_gb": 1.76,
+          "size_vram_gb": 0.0
+        },
+        {
+          "name": "embeddinggemma:latest",
+          "size_gb": 0.63,
+          "size_vram_gb": 0.0
+        }
+      ],
+      "load_s": 0.02,
+      "ttft_s": 2.46,
+      "prompt_tokens": 1085,
+      "prompt_tok_s": 4625.4,
+      "gen_tokens": 46,
+      "gen_tok_s": 9.7,
+      "status": "answered"
+    },
+    {
+      "step": "keyword search (no model)",
+      "wall_s": 0.02,
+      "peak_ollama_rss_gb": 0.02,
+      "peak_python_rss_gb": 0.06,
+      "min_system_available_gb": 1.55,
+      "ollama_ps": [
+        {
+          "name": "gemma4:e4b-it-q4_K_M",
+          "size_gb": 1.76,
+          "size_vram_gb": 0.0
+        },
+        {
+          "name": "embeddinggemma:latest",
+          "size_gb": 0.63,
+          "size_vram_gb": 0.0
+        }
+      ]
+    },
+    {
+      "step": "hybrid search (embeddinggemma)",
+      "wall_s": 2.19,
+      "peak_ollama_rss_gb": 0.02,
+      "peak_python_rss_gb": 0.06,
+      "min_system_available_gb": 1.5,
+      "ollama_ps": [
+        {
+          "name": "embeddinggemma:latest",
+          "size_gb": 0.63,
+          "size_vram_gb": 0.0
+        },
+        {
+          "name": "gemma4:e4b-it-q4_K_M",
+          "size_gb": 1.76,
+          "size_vram_gb": 0.0
+        }
+      ]
+    },
+    {
+      "step": "ingest: Gemma writes one note (Career Networking and Visibility)",
+      "wall_s": 79.45,
+      "peak_ollama_rss_gb": 0.02,
+      "peak_python_rss_gb": 0.07,
+      "min_system_available_gb": 1.32,
+      "ollama_ps": [
+        {
+          "name": "gemma4:e4b-it-q4_K_M",
+          "size_gb": 1.76,
+          "size_vram_gb": 0.0
+        },
+        {
+          "name": "embeddinggemma:latest",
+          "size_gb": 0.63,
+          "size_vram_gb": 0.0
+        }
+      ],
+      "ttft_s": 36.65,
+      "prompt_tokens": 1021,
+      "prompt_tok_s": 30.1,
+      "gen_tokens": 434,
+      "gen_tok_s": 10.2
+    },
+    {
+      "step": "ingest: parse + index all raw files (cached parse)",
+      "wall_s": 0.77,
+      "peak_ollama_rss_gb": 0.02,
+      "peak_python_rss_gb": 0.08,
+      "min_system_available_gb": 1.68,
+      "ollama_ps": [
+        {
+          "name": "gemma4:e4b-it-q4_K_M",
+          "size_gb": 1.76,
+          "size_vram_gb": 0.0
+        },
+        {
+          "name": "embeddinggemma:latest",
+          "size_gb": 0.63,
+          "size_vram_gb": 0.0
+        }
+      ]
+    }
+  ]
+}
